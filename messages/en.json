@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "about": "About us"
+  },
+  "home": {
+    "hero_title": "Sea & Candles",
+    "hero_subtitle": "Handcrafted candles inspired by the sea. Every scent, a story.",
+    "cta": "EXPLORE COLLECTION",
+    "categories_title": "Categories"
+  },
+  "products": {
+    "title": "COLLECTION",
+    "empty": "No products yet.",
+    "add_to_cart": "ADD TO CART",
+    "stock": "Available stock"
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "CHECKOUT",
+    "remove": "Remove"
+  },
+  "footer": {
+    "bio": "Soy wax and eco resin candles. Biodegradable and always respectful of the environment.",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  }
+}

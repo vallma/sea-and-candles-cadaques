@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "cart": "Panier",
+    "about": "À propos"
+  },
+  "home": {
+    "hero_title": "Sea & Candles",
+    "hero_subtitle": "Bougies artisanales inspirées de la mer. Chaque parfum, une histoire.",
+    "cta": "EXPLORER LA COLLECTION",
+    "categories_title": "Catégories"
+  },
+  "products": {
+    "title": "COLLECTION",
+    "empty": "Aucun produit pour l'instant.",
+    "add_to_cart": "AJOUTER AU PANIER",
+    "stock": "Stock disponible"
+  },
+  "cart": {
+    "title": "Votre panier",
+    "empty": "Votre panier est vide.",
+    "total": "Total",
+    "checkout": "FINALISER L'ACHAT",
+    "remove": "Supprimer"
+  },
+  "footer": {
+    "bio": "Bougies en cire de soja et résine écologique. Biodégradables et toujours respectueuses de l'environnement.",
+    "contact": "Contact",
+    "rights": "Tous droits réservés"
+  }
+}

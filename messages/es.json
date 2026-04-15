@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "cart": "Carrito",
+    "about": "Sobre nosotros"
+  },
+  "home": {
+    "hero_title": "Sea & Candles",
+    "hero_subtitle": "Velas artesanales inspiradas en el mar. Cada aroma, una historia.",
+    "cta": "EXPLORAR COLECCIÓN",
+    "categories_title": "Categorías"
+  },
+  "products": {
+    "title": "COLECCIÓN",
+    "empty": "Aún no hay productos.",
+    "add_to_cart": "AGREGAR AL CARRITO",
+    "stock": "Stock disponible"
+  },
+  "cart": {
+    "title": "Tu carrito",
+    "empty": "El carrito está vacío.",
+    "total": "Total",
+    "checkout": "FINALIZAR COMPRA",
+    "remove": "Eliminar"
+  },
+  "footer": {
+    "bio": "Velas de cera de soja y resina ecológica. Biodegradables y siempre respetando el medio ambiente.",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados"
+  }
+}
