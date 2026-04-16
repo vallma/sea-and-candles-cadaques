@@ -4,51 +4,48 @@ import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-export type ActionState = { error?: string; success?: boolean } | null;
+export type ActionState = { error?: string } | null;
+
+interface OptionGroupInput {
+  name: string;
+  options: { value: string; stock: number; priceModifier: number }[];
+}
+
+function parseForm(formData: FormData) {
+  return {
+    name:        (formData.get("name") as string)?.trim(),
+    description: (formData.get("description") as string)?.trim() || undefined,
+    price:       parseFloat(formData.get("price") as string),
+    stock:       parseInt(formData.get("stock") as string) || 0,
+    category:    (formData.get("category") as string)?.trim() || undefined,
+    active:      formData.get("active") === "true",
+    burningTime: formData.get("burningTime") ? parseInt(formData.get("burningTime") as string) : undefined,
+    weight:      formData.get("weight") ? parseInt(formData.get("weight") as string) : undefined,
+    dimensions:  (formData.get("dimensions") as string)?.trim() || undefined,
+    images:      JSON.parse((formData.get("images") as string) || "[]") as string[],
+    tags:        JSON.parse((formData.get("tags") as string) || "[]") as string[],
+    materials:   JSON.parse((formData.get("materials") as string) || "[]") as string[],
+    optionGroups: JSON.parse((formData.get("optionGroups") as string) || "[]") as OptionGroupInput[],
+  };
+}
 
 export async function createProduct(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const name = formData.get("name") as string;
-  const description = formData.get("description") as string;
-  const price = parseFloat(formData.get("price") as string);
-  const stock = parseInt(formData.get("stock") as string) || 0;
-  const category = formData.get("category") as string;
-  const burningTime = formData.get("burningTime") ? parseInt(formData.get("burningTime") as string) : undefined;
-  const weight = formData.get("weight") ? parseInt(formData.get("weight") as string) : undefined;
-  const dimensions = formData.get("dimensions") as string || undefined;
-  const active = formData.get("active") === "true";
-
-  const imagesRaw = formData.get("images") as string;
-  const images: string[] = imagesRaw ? JSON.parse(imagesRaw) : [];
-
-  const tagsRaw = formData.get("tags") as string;
-  const tags: string[] = tagsRaw ? JSON.parse(tagsRaw) : [];
-
-  const materialsRaw = formData.get("materials") as string;
-  const materials: string[] = materialsRaw ? JSON.parse(materialsRaw) : ["Cera de soja", "Jesmonite®"];
-
-  const variantsRaw = formData.get("variants") as string;
-  const variants: { scent: string; stock: number }[] = variantsRaw ? JSON.parse(variantsRaw) : [];
-
-  if (!name || !price) return { error: "Nom i preu són obligatoris." };
-  if (isNaN(price) || price <= 0) return { error: "El preu ha de ser un número positiu." };
+  const d = parseForm(formData);
+  if (!d.name) return { error: "El nom és obligatori." };
+  if (isNaN(d.price) || d.price <= 0) return { error: "El preu ha de ser un número positiu." };
 
   await prisma.product.create({
     data: {
-      name,
-      description: description || undefined,
-      price,
-      stock,
-      category: category || undefined,
-      burningTime,
-      weight,
-      dimensions,
-      active,
-      images,
-      tags,
-      materials,
-      variants: variants.length
-        ? { create: variants.map((v) => ({ scent: v.scent, stock: v.stock })) }
-        : undefined,
+      name: d.name, description: d.description, price: d.price, stock: d.stock,
+      category: d.category, active: d.active, burningTime: d.burningTime,
+      weight: d.weight, dimensions: d.dimensions, images: d.images,
+      tags: d.tags, materials: d.materials,
+      optionGroups: d.optionGroups.length ? {
+        create: d.optionGroups.map((g, i) => ({
+          name: g.name, position: i,
+          options: { create: g.options.map((o) => ({ value: o.value, stock: o.stock, priceModifier: o.priceModifier })) },
+        })),
+      } : undefined,
     },
   });
 
@@ -57,38 +54,28 @@ export async function createProduct(_prev: ActionState, formData: FormData): Pro
 }
 
 export async function updateProduct(id: string, _prev: ActionState, formData: FormData): Promise<ActionState> {
-  const name = formData.get("name") as string;
-  const description = formData.get("description") as string;
-  const price = parseFloat(formData.get("price") as string);
-  const stock = parseInt(formData.get("stock") as string) || 0;
-  const category = formData.get("category") as string;
-  const burningTime = formData.get("burningTime") ? parseInt(formData.get("burningTime") as string) : undefined;
-  const weight = formData.get("weight") ? parseInt(formData.get("weight") as string) : undefined;
-  const dimensions = formData.get("dimensions") as string || undefined;
-  const active = formData.get("active") === "true";
+  const d = parseForm(formData);
+  if (!d.name) return { error: "El nom és obligatori." };
+  if (isNaN(d.price) || d.price <= 0) return { error: "El preu ha de ser un número positiu." };
 
-  const imagesRaw = formData.get("images") as string;
-  const images: string[] = imagesRaw ? JSON.parse(imagesRaw) : [];
-  const tagsRaw = formData.get("tags") as string;
-  const tags: string[] = tagsRaw ? JSON.parse(tagsRaw) : [];
-  const materialsRaw = formData.get("materials") as string;
-  const materials: string[] = materialsRaw ? JSON.parse(materialsRaw) : [];
-  const variantsRaw = formData.get("variants") as string;
-  const variants: { scent: string; stock: number }[] = variantsRaw ? JSON.parse(variantsRaw) : [];
+  // Esborra els grups antics (cascade elimina les opcions)
+  await prisma.productOptionGroup.deleteMany({ where: { productId: id } });
 
-  if (!name || !price) return { error: "Nom i preu són obligatoris." };
-
-  await prisma.$transaction([
-    prisma.productVariant.deleteMany({ where: { productId: id } }),
-    prisma.product.update({
-      where: { id },
-      data: {
-        name, description: description || undefined, price, stock, category: category || undefined,
-        burningTime, weight, dimensions, active, images, tags, materials,
-        variants: variants.length ? { create: variants.map((v) => ({ scent: v.scent, stock: v.stock })) } : undefined,
-      },
-    }),
-  ]);
+  await prisma.product.update({
+    where: { id },
+    data: {
+      name: d.name, description: d.description, price: d.price, stock: d.stock,
+      category: d.category, active: d.active, burningTime: d.burningTime,
+      weight: d.weight, dimensions: d.dimensions, images: d.images,
+      tags: d.tags, materials: d.materials,
+      optionGroups: d.optionGroups.length ? {
+        create: d.optionGroups.map((g, i) => ({
+          name: g.name, position: i,
+          options: { create: g.options.map((o) => ({ value: o.value, stock: o.stock, priceModifier: o.priceModifier })) },
+        })),
+      } : undefined,
+    },
+  });
 
   revalidatePath("/admin/products");
   redirect("/admin/products");

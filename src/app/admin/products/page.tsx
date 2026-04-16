@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export default async function AdminProductsPage() {
   const products = await prisma.product.findMany({
-    include: { variants: true },
+    include: { optionGroups: { include: { options: true } } },
     orderBy: { createdAt: "desc" },
   });
 
@@ -47,8 +47,9 @@ export default async function AdminProductsPage() {
             </thead>
             <tbody className="divide-y divide-slate-50">
               {products.map((p) => {
-                const totalStock = p.variants.length
-                  ? p.variants.reduce((s, v) => s + v.stock, 0)
+                const allOptions = p.optionGroups.flatMap((g) => g.options);
+                const totalStock = allOptions.length
+                  ? allOptions.reduce((s, o) => s + o.stock, 0)
                   : p.stock;
                 return (
                   <tr key={p.id} className="hover:bg-slate-50/50 transition-colors">
@@ -60,8 +61,10 @@ export default async function AdminProductsPage() {
                         )}
                         <div>
                           <p className="font-medium text-slate-800">{p.name}</p>
-                          {p.variants.length > 0 && (
-                            <p className="text-xs text-slate-400">{p.variants.length} olors</p>
+                          {p.optionGroups.length > 0 && (
+                            <p className="text-xs text-slate-400">
+                              {p.optionGroups.map((g) => `${g.name} (${g.options.length})`).join(" · ")}
+                            </p>
                           )}
                         </div>
                       </div>

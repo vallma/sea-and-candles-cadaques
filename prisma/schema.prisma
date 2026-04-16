@@ -28,16 +28,28 @@ model Product {
   createdAt     DateTime         @default(now())
   updatedAt     DateTime         @updatedAt
   orderItems    OrderItem[]
-  variants      ProductVariant[]
+  optionGroups  ProductOptionGroup[]
 }
 
-model ProductVariant {
-  id         String      @id @default(cuid())
-  scent      String
-  stock      Int         @default(0)
-  product    Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
-  productId  String
-  orderItems OrderItem[]
+// Grup d'opcions: "Olor", "Mida", etc.
+model ProductOptionGroup {
+  id        String               @id @default(cuid())
+  name      String               // ex: "Olor", "Mida"
+  position  Int                  @default(0)
+  product   Product              @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+  options   ProductOption[]
+}
+
+// Valor de cada opció: "Vainilla", "XL", etc.
+model ProductOption {
+  id            String             @id @default(cuid())
+  value         String             // ex: "Vainilla", "XL"
+  stock         Int                @default(0)
+  priceModifier Float              @default(0) // +/- sobre el preu base
+  group         ProductOptionGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  groupId       String
+  orderItems    OrderItem[]
 }
 
 model Order {
@@ -52,15 +64,16 @@ model Order {
 }
 
 model OrderItem {
-  id        String          @id @default(cuid())
-  quantity  Int
-  price     Float
-  product   Product         @relation(fields: [productId], references: [id])
-  productId String
-  order     Order           @relation(fields: [orderId], references: [id])
-  orderId   String
-  variant   ProductVariant? @relation(fields: [variantId], references: [id])
-  variantId String?
+  id              String          @id @default(cuid())
+  quantity        Int
+  price           Float
+  selectedOptions Json            @default("[]") // [{groupName, optionValue}]
+  product         Product         @relation(fields: [productId], references: [id])
+  productId       String
+  order           Order           @relation(fields: [orderId], references: [id])
+  orderId         String
+  option          ProductOption?  @relation(fields: [optionId], references: [id])
+  optionId        String?
 }
 
 enum OrderStatus {
