@@ -1,32 +1,43 @@
 {
-  "nav": {
-    "home": "Home",
-    "products": "Products",
-    "cart": "Cart",
-    "about": "About us"
+  "nav": { "products": "Collection", "cart": "Cart", "about": "About" },
+  "hero": {
+    "origin": "Cadaqués · Costa Brava · Catalonia",
+    "tagline": "Made with love in Cadaqués",
+    "subtitle": "Handcrafted candles inspired by the Mediterranean sea. Soy wax, eco resin and the beauty of Cap de Creus.",
+    "cta": "Discover the collection"
   },
-  "home": {
-    "hero_title": "Sea & Candles",
-    "hero_subtitle": "Handcrafted candles inspired by the sea. Every scent, a story.",
-    "cta": "EXPLORE COLLECTION",
-    "categories_title": "Categories"
+  "manifest": {
+    "label": "Our philosophy",
+    "title": "Every candle,\na story from the sea",
+    "text": "We live by the Mediterranean and bring it to your home. Every piece is born from observing nature: the shapes of sea snails, the spiral of shells, the texture of sea urchins. Nothing synthetic. Nothing artificial. All handmade from scratch, with materials that respect the sea that inspires us."
   },
-  "products": {
-    "title": "COLLECTION",
-    "empty": "No products yet.",
-    "add_to_cart": "ADD TO CART",
-    "stock": "Available stock"
+  "materials": {
+    "label": "Our materials",
+    "soja_title": "Soy wax",
+    "soja_text": "100% plant-based. Burns cleaner and longer than paraffin wax.",
+    "jesmonite_title": "Jesmonite®",
+    "jesmonite_text": "The most eco-friendly resin on the market. Biodegradable and VOC-free. The jars last forever.",
+    "vegan_title": "100% Vegan",
+    "vegan_text": "We never use organic elements like real shells or sea snails. Everything is respectful of marine life.",
+    "local_title": "Made in Cadaqués",
+    "local_text": "Every piece is handcrafted in our Cadaqués studio, in the heart of Cap de Creus Natural Park."
   },
-  "cart": {
-    "title": "Your cart",
-    "empty": "Your cart is empty.",
-    "total": "Total",
-    "checkout": "CHECKOUT",
-    "remove": "Remove"
+  "collection": {
+    "label": "Collection",
+    "title": "Inspired by the Mediterranean",
+    "products": [
+      { "name": "Sea Star", "desc": "With real beach glass", "tag": "Exclusive" },
+      { "name": "Sea Spiral", "desc": "Inspired by sea snails", "tag": "New" },
+      { "name": "Sea Snail", "desc": "Marble effect · All colors", "tag": "Bestseller" },
+      { "name": "Curculla XL", "desc": "The largest candle in the collection", "tag": "Large format" },
+      { "name": "Corna", "desc": "With colored glass from our beaches", "tag": "" },
+      { "name": "Sea Urchin", "desc": "Mediterranean silhouette", "tag": "" }
+    ],
+    "cta": "View all products"
   },
+  "gallery": { "label": "The process" },
   "footer": {
-    "bio": "Soy wax and eco resin candles. Biodegradable and always respectful of the environment.",
-    "contact": "Contact",
+    "bio": "Handcrafted candles made with soy wax and ecological Jesmonite resin. Biodegradable and always respectful of the environment.",
     "rights": "All rights reserved"
   }
 }

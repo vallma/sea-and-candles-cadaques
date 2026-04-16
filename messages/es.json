@@ -1,32 +1,43 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "products": "Productos",
-    "cart": "Carrito",
-    "about": "Sobre nosotros"
+  "nav": { "products": "Colección", "cart": "Carrito", "about": "Nosotros" },
+  "hero": {
+    "origin": "Cadaqués · Costa Brava · Cataluña",
+    "tagline": "Hecho con amor en Cadaqués",
+    "subtitle": "Velas artesanales inspiradas en el mar mediterráneo. Cera de soja, resina ecológica y la belleza de Cap de Creus.",
+    "cta": "Descubrir la colección"
   },
-  "home": {
-    "hero_title": "Sea & Candles",
-    "hero_subtitle": "Velas artesanales inspiradas en el mar. Cada aroma, una historia.",
-    "cta": "EXPLORAR COLECCIÓN",
-    "categories_title": "Categorías"
+  "manifest": {
+    "label": "Nuestra filosofía",
+    "title": "Cada vela,\nuna historia del mar",
+    "text": "Vivimos en el Mediterráneo y lo llevamos a tu hogar. Cada pieza nace de la observación de la naturaleza: las formas de los caracoles, la espiral de las conchas, la textura de los erizos. Nada sintético. Nada artificial. Todo hecho a mano, desde cero, con materiales que respetan el mar que nos inspira."
   },
-  "products": {
-    "title": "COLECCIÓN",
-    "empty": "Aún no hay productos.",
-    "add_to_cart": "AGREGAR AL CARRITO",
-    "stock": "Stock disponible"
+  "materials": {
+    "label": "Nuestros materiales",
+    "soja_title": "Cera de soja",
+    "soja_text": "100% de origen vegetal. Arde más limpia y dura más que la cera de parafina.",
+    "jesmonite_title": "Jesmonite®",
+    "jesmonite_text": "La resina más ecológica del mercado. Biodegradable y sin COVs. Los tarros duran para siempre.",
+    "vegan_title": "100% Vegano",
+    "vegan_text": "Nunca usamos elementos orgánicos como caracoles o conchas reales. Todo respetuoso con la vida marina.",
+    "local_title": "Hecho en Cadaqués",
+    "local_text": "Cada pieza se crea a mano en el taller de Cadaqués, en el corazón del Parque Natural de Cap de Creus."
   },
-  "cart": {
-    "title": "Tu carrito",
-    "empty": "El carrito está vacío.",
-    "total": "Total",
-    "checkout": "FINALIZAR COMPRA",
-    "remove": "Eliminar"
+  "collection": {
+    "label": "Colección",
+    "title": "Inspirado en el Mediterráneo",
+    "products": [
+      { "name": "Estrella de Mar", "desc": "Con cristales de playa reales", "tag": "Exclusiva" },
+      { "name": "Espiral de Mar", "desc": "Inspirada en los caracoles de mar", "tag": "Nueva" },
+      { "name": "Caracol de Mar", "desc": "Efecto mármol · Todos los colores", "tag": "Bestseller" },
+      { "name": "Curculla XL", "desc": "La vela más grande de la colección", "tag": "Gran formato" },
+      { "name": "Corna", "desc": "Con cristales de colores de nuestras playas", "tag": "" },
+      { "name": "Erizo de Mar", "desc": "Silueta mediterránea", "tag": "" }
+    ],
+    "cta": "Ver todos los productos"
   },
+  "gallery": { "label": "El proceso" },
   "footer": {
-    "bio": "Velas de cera de soja y resina ecológica. Biodegradables y siempre respetando el medio ambiente.",
-    "contact": "Contacto",
+    "bio": "Velas artesanales hechas con cera de soja y resina Jesmonite ecológica. Biodegradables y siempre respetando el medio ambiente.",
     "rights": "Todos los derechos reservados"
   }
 }

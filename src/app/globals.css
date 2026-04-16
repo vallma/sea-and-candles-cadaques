@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sea-deep:    #0d2b45;
+  --color-sea-mid:     #1a5276;
+  --color-sea-light:   #2e86c1;
+  --color-sea-foam:    #a9cce3;
+  --color-sea-mist:    #d6eaf8;
+  --color-sand:        #f5efe6;
+  --color-white-wall:  #fafafa;
+  --color-amber:       #e8a838;
+  --color-flame:       #ff6b2b;
+  --font-display:      "Cormorant Garamond", Georgia, serif;
+  --font-sans:         var(--font-geist);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-white-wall);
+  color: var(--color-sea-deep);
+  font-family: var(--font-sans), Arial, sans-serif;
 }
+
+@keyframes wave {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes smokeRise {
+  0%   { opacity: 0;    transform: translateY(0)    scaleX(1); }
+  20%  { opacity: 0.7;  transform: translateY(-8px)  scaleX(1.1); }
+  60%  { opacity: 0.4;  transform: translateY(-22px) scaleX(0.9); }
+  100% { opacity: 0;    transform: translateY(-40px) scaleX(1.2); }
+}
+
+.wave { animation: wave 12s linear infinite; }

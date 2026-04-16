@@ -1,32 +1,49 @@
 {
   "nav": {
-    "home": "Inici",
-    "products": "Productes",
+    "products": "Col·lecció",
     "cart": "Cistella",
-    "about": "Sobre nosaltres"
+    "about": "Nosaltres"
   },
-  "home": {
-    "hero_title": "Sea & Candles",
-    "hero_subtitle": "Espelmes artesanals inspirades en el mar. Cada aroma, una història.",
-    "cta": "EXPLORAR COL·LECCIÓ",
-    "categories_title": "Categories"
+  "hero": {
+    "origin": "Cadaqués · Costa Brava · Catalunya",
+    "tagline": "Fet amb amor a Cadaqués",
+    "subtitle": "Espelmes artesanals inspirades en el mar mediterrani. Cera de soja, resina ecològica i la bellesa de Cap de Creus.",
+    "cta": "Descobrir la col·lecció"
   },
-  "products": {
-    "title": "COL·LECCIÓ",
-    "empty": "Encara no hi ha productes.",
-    "add_to_cart": "AFEGIR A LA CISTELLA",
-    "stock": "Estoc disponible"
+  "manifest": {
+    "label": "La nostra filosofia",
+    "title": "Cada espelma,\nuna història del mar",
+    "text": "Vivim al Mediterrani i el portem a casa vostra. Cada peça neix de l'observació de la natura: les formes dels cargols, l'espiral de les petxines, la textura dels eriçons. Res de sintètic. Res d'artificial. Tot fet a mà, des de zero, amb materials que respecten el mar que ens inspira."
   },
-  "cart": {
-    "title": "La teva cistella",
-    "empty": "La cistella és buida.",
-    "total": "Total",
-    "checkout": "FINALITZAR COMPRA",
-    "remove": "Eliminar"
+  "materials": {
+    "label": "Els nostres materials",
+    "soja_title": "Cera de soja",
+    "soja_text": "100% d'origen vegetal. Crema més neta i durant més temps que la cera de parafina.",
+    "jesmonite_title": "Jesmonite®",
+    "jesmonite_text": "La resina més ecològica del mercat. Biodegradable i sense COVs. Els pots duren per sempre.",
+    "vegan_title": "100% Vegà",
+    "vegan_text": "Mai utilitzem elements orgànics com cargols o petxines reals. Tot és respectuós amb la vida marina.",
+    "local_title": "Fet a Cadaqués",
+    "local_text": "Cada peça es crea a mà al taller de Cadaqués, al cor del Parc Natural de Cap de Creus."
+  },
+  "collection": {
+    "label": "Col·lecció",
+    "title": "Inspirat en el Mediterrani",
+    "products": [
+      { "name": "Estrella de Mar", "desc": "Amb vidres de platja reals", "tag": "Exclusiva" },
+      { "name": "Espiral de Mar", "desc": "Inspirada en els cargols de mar", "tag": "Nova" },
+      { "name": "Cargol de Mar", "desc": "Efecte marbre · Tots els colors", "tag": "Bestseller" },
+      { "name": "Curculla XL", "desc": "L'espelma més gran de la col·lecció", "tag": "Gran format" },
+      { "name": "Corna", "desc": "Amb vidres de colors de les nostres platges", "tag": "" },
+      { "name": "Eriçó de Mar", "desc": "Silueta mediterrània", "tag": "" }
+    ],
+    "cta": "Veure tots els productes"
+  },
+  "gallery": {
+    "label": "El procés"
   },
   "footer": {
-    "bio": "Espelmes amb cera de soja i resina ecològica. Biodegradables i sempre respectant el medi.",
-    "contact": "Contacte",
+    "bio": "Espelmes artesanals fetes amb cera de soja i resina Jesmonite ecològica. Biodegradables i sempre respectant el medi.",
     "rights": "Tots els drets reservats"
   }
 }

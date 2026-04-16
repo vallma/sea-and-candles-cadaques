@@ -1,32 +1,43 @@
 {
-  "nav": {
-    "home": "Accueil",
-    "products": "Produits",
-    "cart": "Panier",
-    "about": "À propos"
+  "nav": { "products": "Collection", "cart": "Panier", "about": "À propos" },
+  "hero": {
+    "origin": "Cadaqués · Costa Brava · Catalogne",
+    "tagline": "Fait avec amour à Cadaqués",
+    "subtitle": "Bougies artisanales inspirées de la mer méditerranée. Cire de soja, résine écologique et la beauté de Cap de Creus.",
+    "cta": "Découvrir la collection"
   },
-  "home": {
-    "hero_title": "Sea & Candles",
-    "hero_subtitle": "Bougies artisanales inspirées de la mer. Chaque parfum, une histoire.",
-    "cta": "EXPLORER LA COLLECTION",
-    "categories_title": "Catégories"
+  "manifest": {
+    "label": "Notre philosophie",
+    "title": "Chaque bougie,\nune histoire de la mer",
+    "text": "Nous vivons en Méditerranée et nous vous l'apportons. Chaque pièce naît de l'observation de la nature : les formes des escargots de mer, la spirale des coquillages, la texture des oursins. Rien de synthétique. Rien d'artificiel. Tout fait à la main, depuis zéro, avec des matériaux qui respectent la mer qui nous inspire."
   },
-  "products": {
-    "title": "COLLECTION",
-    "empty": "Aucun produit pour l'instant.",
-    "add_to_cart": "AJOUTER AU PANIER",
-    "stock": "Stock disponible"
+  "materials": {
+    "label": "Nos matériaux",
+    "soja_title": "Cire de soja",
+    "soja_text": "100% d'origine végétale. Brûle plus proprement et dure plus longtemps que la cire de paraffine.",
+    "jesmonite_title": "Jesmonite®",
+    "jesmonite_text": "La résine la plus écologique du marché. Biodégradable et sans COV. Les pots durent éternellement.",
+    "vegan_title": "100% Végane",
+    "vegan_text": "Nous n'utilisons jamais d'éléments organiques comme des vrais coquillages. Tout respecte la vie marine.",
+    "local_title": "Fait à Cadaqués",
+    "local_text": "Chaque pièce est créée à la main dans notre atelier de Cadaqués, au cœur du Parc Naturel de Cap de Creus."
   },
-  "cart": {
-    "title": "Votre panier",
-    "empty": "Votre panier est vide.",
-    "total": "Total",
-    "checkout": "FINALISER L'ACHAT",
-    "remove": "Supprimer"
+  "collection": {
+    "label": "Collection",
+    "title": "Inspiré par la Méditerranée",
+    "products": [
+      { "name": "Étoile de Mer", "desc": "Avec de vrais éclats de verre de plage", "tag": "Exclusive" },
+      { "name": "Spirale de Mer", "desc": "Inspirée des escargots de mer", "tag": "Nouvelle" },
+      { "name": "Escargot de Mer", "desc": "Effet marbre · Toutes les couleurs", "tag": "Bestseller" },
+      { "name": "Curculla XL", "desc": "La plus grande bougie de la collection", "tag": "Grand format" },
+      { "name": "Corna", "desc": "Avec des éclats de verre colorés de nos plages", "tag": "" },
+      { "name": "Oursin de Mer", "desc": "Silhouette méditerranéenne", "tag": "" }
+    ],
+    "cta": "Voir tous les produits"
   },
+  "gallery": { "label": "Le processus" },
   "footer": {
-    "bio": "Bougies en cire de soja et résine écologique. Biodégradables et toujours respectueuses de l'environnement.",
-    "contact": "Contact",
+    "bio": "Bougies artisanales en cire de soja et résine Jesmonite écologique. Biodégradables et toujours respectueuses de l'environnement.",
     "rights": "Tous droits réservés"
   }
 }
