@@ -454,8 +454,10 @@ export default async function Home({
           </p>
         </blockquote>
 
-        <div className="mono" style={{ color: "var(--mute)" }}>
-          {t("closingFootnote")}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, marginTop: 8 }}>
+          <div className="mono" style={{ color: "var(--mute)" }}>♡ 𝙵𝚎𝚝 𝚊𝚖𝚋 𝚊𝚖𝚘𝚛 𝚊 𝙲𝚊𝚍𝚊𝚚𝚞é𝚜</div>
+          <div className="mono" style={{ color: "var(--mute)", fontSize: 12 }}>🕯 Espelmes amb cera de soja i resina ecològica</div>
+          <div className="mono" style={{ color: "var(--mute)", fontSize: 12 }}>🪴 Biodegradables i sempre respectant el medi</div>
         </div>
       </section>
     </>

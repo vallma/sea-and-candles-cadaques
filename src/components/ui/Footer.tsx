@@ -44,17 +44,11 @@ export default function Footer() {
             >
               Sea&amp;Candles
             </div>
-            <p
-              style={{
-                fontSize: 13,
-                color: "var(--ink-soft)",
-                lineHeight: 1.75,
-                marginBottom: 20,
-                maxWidth: 260,
-              }}
-            >
-              {t("bio")}
-            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 20 }}>
+              <div style={{ fontSize: 13, color: "var(--ink-soft)" }}>♡ 𝙵𝚎𝚝 𝚊𝚖𝚋 𝚊𝚖𝚘𝚛 𝚊 𝙲𝚊𝚍𝚊𝚚𝚞é𝚜</div>
+              <div style={{ fontSize: 13, color: "var(--ink-soft)" }}>🕯 Espelmes amb cera de soja i resina ecològica</div>
+              <div style={{ fontSize: 13, color: "var(--ink-soft)" }}>🪴 Biodegradables i sempre respectant el medi</div>
+            </div>
             <div className="mono" style={{ color: "var(--mute)" }}>
               {t("est")}
             </div>
