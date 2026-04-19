@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart-context";
 
 const locales = [
@@ -21,9 +21,7 @@ export default function Navbar() {
   const { itemCount } = useCart();
 
   function switchLocale(next: string) {
-    const segments = pathname.split("/");
-    segments[1] = next;
-    router.push(segments.join("/") || "/");
+    router.replace(pathname, { locale: next });
   }
 
   return (
