@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import SeaUrchinCandle from "@/components/ui/SeaUrchinCandle";
@@ -17,6 +17,7 @@ const GALLERY_POSTS = ["06","07","08","09","10","12"];
 
 export default function Home() {
   const t = useTranslations();
+  const locale = useLocale();
 
   const products = t.raw("collection.products") as { name: string; desc: string; tag: string }[];
 
@@ -84,7 +85,7 @@ export default function Home() {
             {t("hero.subtitle")}
           </p>
 
-          <Link href="/products"
+          <Link href={`/${locale}/products`}
             className="group flex items-center gap-3 px-10 py-3.5 border border-[#2e86c1]/40 text-[#7fb3d3] text-[9px] tracking-[0.45em] uppercase hover:bg-[#1a5276]/40 hover:border-[#2e86c1]/70 hover:text-white transition-all duration-500">
             {t("hero.cta")}
             <span className="text-[#2e86c1] group-hover:translate-x-1 transition-transform">→</span>
@@ -186,7 +187,7 @@ export default function Home() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/products"
+          <Link href={`/${locale}/products`}
             className="inline-block px-10 py-3 border border-[#2e86c1]/40 text-[#7fb3d3] text-[9px] tracking-[0.4em] uppercase hover:bg-[#1a5276]/40 hover:text-white transition-all duration-400">
             {t("collection.cta")}
           </Link>
