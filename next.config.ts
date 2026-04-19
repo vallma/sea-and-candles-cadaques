@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [],
   },
-
+  redirects: async () => [
+    { source: "/", destination: "/ca", permanent: false },
+  ],
 };
 
 export default withNextIntl(nextConfig);
