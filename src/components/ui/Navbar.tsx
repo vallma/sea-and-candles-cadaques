@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useCart } from "@/lib/cart-context";
 
 const locales = [
   { code: "ca", label: "CAT" },
@@ -17,6 +18,7 @@ export default function Navbar() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const { itemCount } = useCart();
 
   function switchLocale(next: string) {
     const segments = pathname.split("/");
@@ -46,8 +48,13 @@ export default function Navbar() {
           <Link href={`/${locale}/products`} className="hover:text-white transition-colors">
             {t("products").toUpperCase()}
           </Link>
-          <Link href={`/${locale}/cart`} className="hover:text-white transition-colors">
+          <Link href={`/${locale}/cart`} className="relative hover:text-white transition-colors">
             {t("cart").toUpperCase()}
+            {itemCount > 0 && (
+              <span className="absolute -top-2.5 -right-3.5 bg-[#2e86c1] text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-medium">
+                {itemCount > 9 ? "9+" : itemCount}
+              </span>
+            )}
           </Link>
         </nav>
 

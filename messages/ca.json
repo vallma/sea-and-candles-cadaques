@@ -45,5 +45,47 @@
   "footer": {
     "bio": "Espelmes artesanals fetes amb cera de soja i resina Jesmonite ecològica. Biodegradables i sempre respectant el medi.",
     "rights": "Tots els drets reservats"
+  },
+  "products": {
+    "label": "Col·lecció completa",
+    "title": "Totes les espelmes",
+    "empty": "Pròximament",
+    "view": "Veure producte"
+  },
+  "product": {
+    "back": "Tornar a la col·lecció",
+    "addToCart": "Afegir a la cistella",
+    "added": "✓ Afegit",
+    "materials": "Materials",
+    "details": "Detalls tècnics",
+    "burningTime": "Temps de cremada",
+    "weight": "Pes",
+    "dimensions": "Mides",
+    "hours": "h",
+    "grams": "g",
+    "selectOptions": "Selecciona les opcions"
+  },
+  "cart": {
+    "label": "La teva cistella",
+    "title": "Cistella",
+    "empty": "La cistella és buida",
+    "goShop": "Anar a la col·lecció",
+    "total": "Total",
+    "email": "El teu correu electrònic",
+    "emailRequired": "Introdueix el teu email",
+    "checkout": "Finalitzar compra",
+    "processing": "Processant...",
+    "checkoutError": "Error en el pagament. Torna-ho a intentar.",
+    "clear": "Buidar cistella",
+    "continueShopping": "Continuar comprant"
+  },
+  "orders": {
+    "label": "Comanda confirmada",
+    "title": "Gràcies!",
+    "subtitle": "T'hem enviat la confirmació a {email}",
+    "summary": "Resum de la comanda",
+    "total": "Total",
+    "goHome": "Tornar a l'inici",
+    "notFound": "Comanda no trobada"
   }
 }

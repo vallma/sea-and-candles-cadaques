@@ -39,5 +39,47 @@
   "footer": {
     "bio": "Velas artesanales hechas con cera de soja y resina Jesmonite ecológica. Biodegradables y siempre respetando el medio ambiente.",
     "rights": "Todos los derechos reservados"
+  },
+  "products": {
+    "label": "Colección completa",
+    "title": "Todas las velas",
+    "empty": "Próximamente",
+    "view": "Ver producto"
+  },
+  "product": {
+    "back": "Volver a la colección",
+    "addToCart": "Añadir al carrito",
+    "added": "✓ Añadido",
+    "materials": "Materiales",
+    "details": "Detalles técnicos",
+    "burningTime": "Tiempo de quemado",
+    "weight": "Peso",
+    "dimensions": "Medidas",
+    "hours": "h",
+    "grams": "g",
+    "selectOptions": "Selecciona las opciones"
+  },
+  "cart": {
+    "label": "Tu carrito",
+    "title": "Carrito",
+    "empty": "El carrito está vacío",
+    "goShop": "Ir a la colección",
+    "total": "Total",
+    "email": "Tu correo electrónico",
+    "emailRequired": "Introduce tu email",
+    "checkout": "Finalizar compra",
+    "processing": "Procesando...",
+    "checkoutError": "Error en el pago. Inténtalo de nuevo.",
+    "clear": "Vaciar carrito",
+    "continueShopping": "Seguir comprando"
+  },
+  "orders": {
+    "label": "Pedido confirmado",
+    "title": "¡Gracias!",
+    "subtitle": "Te hemos enviado la confirmación a {email}",
+    "summary": "Resumen del pedido",
+    "total": "Total",
+    "goHome": "Volver al inicio",
+    "notFound": "Pedido no encontrado"
   }
 }

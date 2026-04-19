@@ -39,5 +39,47 @@
   "footer": {
     "bio": "Handcrafted candles made with soy wax and ecological Jesmonite resin. Biodegradable and always respectful of the environment.",
     "rights": "All rights reserved"
+  },
+  "products": {
+    "label": "Full collection",
+    "title": "All candles",
+    "empty": "Coming soon",
+    "view": "View product"
+  },
+  "product": {
+    "back": "Back to collection",
+    "addToCart": "Add to cart",
+    "added": "✓ Added",
+    "materials": "Materials",
+    "details": "Technical details",
+    "burningTime": "Burning time",
+    "weight": "Weight",
+    "dimensions": "Dimensions",
+    "hours": "h",
+    "grams": "g",
+    "selectOptions": "Select options"
+  },
+  "cart": {
+    "label": "Your cart",
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "goShop": "Go to collection",
+    "total": "Total",
+    "email": "Your email address",
+    "emailRequired": "Please enter your email",
+    "checkout": "Checkout",
+    "processing": "Processing...",
+    "checkoutError": "Payment error. Please try again.",
+    "clear": "Clear cart",
+    "continueShopping": "Continue shopping"
+  },
+  "orders": {
+    "label": "Order confirmed",
+    "title": "Thank you!",
+    "subtitle": "We've sent your confirmation to {email}",
+    "summary": "Order summary",
+    "total": "Total",
+    "goHome": "Back to home",
+    "notFound": "Order not found"
   }
 }

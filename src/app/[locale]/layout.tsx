@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import { CartProvider } from "@/lib/cart-context";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
@@ -38,9 +39,11 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-stone-50 text-stone-800">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <CartProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </CartProvider>
         </NextIntlClientProvider>
       </body>
     </html>

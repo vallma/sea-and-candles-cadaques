@@ -39,5 +39,47 @@
   "footer": {
     "bio": "Bougies artisanales en cire de soja et résine Jesmonite écologique. Biodégradables et toujours respectueuses de l'environnement.",
     "rights": "Tous droits réservés"
+  },
+  "products": {
+    "label": "Collection complète",
+    "title": "Toutes les bougies",
+    "empty": "Bientôt disponible",
+    "view": "Voir le produit"
+  },
+  "product": {
+    "back": "Retour à la collection",
+    "addToCart": "Ajouter au panier",
+    "added": "✓ Ajouté",
+    "materials": "Matériaux",
+    "details": "Détails techniques",
+    "burningTime": "Temps de combustion",
+    "weight": "Poids",
+    "dimensions": "Dimensions",
+    "hours": "h",
+    "grams": "g",
+    "selectOptions": "Sélectionnez les options"
+  },
+  "cart": {
+    "label": "Votre panier",
+    "title": "Panier",
+    "empty": "Votre panier est vide",
+    "goShop": "Aller à la collection",
+    "total": "Total",
+    "email": "Votre adresse e-mail",
+    "emailRequired": "Veuillez entrer votre e-mail",
+    "checkout": "Finaliser l'achat",
+    "processing": "Traitement...",
+    "checkoutError": "Erreur de paiement. Réessayez.",
+    "clear": "Vider le panier",
+    "continueShopping": "Continuer mes achats"
+  },
+  "orders": {
+    "label": "Commande confirmée",
+    "title": "Merci !",
+    "subtitle": "Nous avons envoyé votre confirmation à {email}",
+    "summary": "Récapitulatif de la commande",
+    "total": "Total",
+    "goHome": "Retour à l'accueil",
+    "notFound": "Commande introuvable"
   }
 }
