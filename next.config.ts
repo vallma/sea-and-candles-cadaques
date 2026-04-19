@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [],
   },
+
 };
 
 export default withNextIntl(nextConfig);
