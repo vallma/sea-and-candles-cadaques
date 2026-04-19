@@ -77,28 +77,16 @@ export default function Navbar() {
           {/* Center: logo */}
           <Link
             href={`/${locale}`}
-            style={{ textDecoration: "none", color: "inherit", display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}
+            style={{ textDecoration: "none", color: "inherit", display: "flex", alignItems: "center", justifyContent: "center" }}
           >
             <Image
               src="/logo.jpg"
               alt="Sea & Candles"
-              width={36}
-              height={36}
+              width={40}
+              height={40}
               className="rounded-full object-cover"
               style={{ border: "1px solid var(--rule)" }}
             />
-            <div
-              className="serif"
-              style={{ fontSize: 16, color: "var(--ink)", letterSpacing: "0.01em", lineHeight: 1 }}
-            >
-              Sea<em style={{ fontWeight: 500 }}>&amp;</em>Candles
-            </div>
-            <div
-              className="mono"
-              style={{ fontSize: 8, color: "var(--mute)", letterSpacing: "0.22em" }}
-            >
-              Cadaqués
-            </div>
           </Link>
 
           {/* Right: locale switcher + cart + hamburger */}
