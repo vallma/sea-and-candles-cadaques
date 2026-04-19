@@ -1,8 +1,12 @@
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    return NextResponse.json({ error: "Payment not configured" }, { status: 503 });
+  }
+
   const { items, customerEmail } = await req.json();
 
   if (!items?.length) {
@@ -19,7 +23,7 @@ export async function POST(req: NextRequest) {
     if (!product) throw new Error(`Product ${item.productId} not found`);
     return {
       price_data: {
-        currency: "usd",
+        currency: "eur",
         product_data: { name: product.name },
         unit_amount: Math.round(product.price * 100),
       },
@@ -27,6 +31,7 @@ export async function POST(req: NextRequest) {
     };
   });
 
+  const stripe = getStripe();
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: lineItems,
