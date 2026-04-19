@@ -1,5 +1,9 @@
 {
-  "nav": { "products": "Collection", "cart": "Panier", "about": "À propos" },
+  "nav": {
+    "products": "Collection",
+    "cart": "Panier",
+    "about": "À propos"
+  },
   "hero": {
     "origin": "Cadaqués · Costa Brava · Catalogne",
     "tagline": "Fait avec amour à Cadaqués",
@@ -23,19 +27,45 @@
     "local_text": "Chaque pièce est créée à la main dans notre atelier de Cadaqués, au cœur du Parc Naturel de Cap de Creus."
   },
   "collection": {
-    "label": "Collection",
+    "label": "Vitrine",
     "title": "Inspiré par la Méditerranée",
     "products": [
-      { "name": "Étoile de Mer", "desc": "Avec de vrais éclats de verre de plage", "tag": "Exclusive" },
-      { "name": "Spirale de Mer", "desc": "Inspirée des escargots de mer", "tag": "Nouvelle" },
-      { "name": "Escargot de Mer", "desc": "Effet marbre · Toutes les couleurs", "tag": "Bestseller" },
-      { "name": "Curculla XL", "desc": "La plus grande bougie de la collection", "tag": "Grand format" },
-      { "name": "Corna", "desc": "Avec des éclats de verre colorés de nos plages", "tag": "" },
-      { "name": "Oursin de Mer", "desc": "Silhouette méditerranéenne", "tag": "" }
+      {
+        "name": "Étoile de Mer",
+        "desc": "Avec de vrais éclats de verre de plage",
+        "tag": "Exclusive"
+      },
+      {
+        "name": "Spirale de Mer",
+        "desc": "Inspirée des escargots de mer",
+        "tag": "Nouvelle"
+      },
+      {
+        "name": "Escargot de Mer",
+        "desc": "Effet marbre · Toutes les couleurs",
+        "tag": "Bestseller"
+      },
+      {
+        "name": "Curculla XL",
+        "desc": "La plus grande bougie de la collection",
+        "tag": "Grand format"
+      },
+      {
+        "name": "Corna",
+        "desc": "Avec des éclats de verre colorés de nos plages",
+        "tag": ""
+      },
+      {
+        "name": "Oursin de Mer",
+        "desc": "Silhouette méditerranéenne",
+        "tag": ""
+      }
     ],
     "cta": "Voir tous les produits"
   },
-  "gallery": { "label": "Le processus" },
+  "gallery": {
+    "label": "Le processus"
+  },
   "footer": {
     "bio": "Bougies artisanales en cire de soja et résine Jesmonite écologique. Biodégradables et toujours respectueuses de l'environnement.",
     "rights": "Tous droits réservés"

@@ -27,15 +27,39 @@
     "local_text": "Cada peça es crea a mà al taller de Cadaqués, al cor del Parc Natural de Cap de Creus."
   },
   "collection": {
-    "label": "Col·lecció",
+    "label": "Mostrador",
     "title": "Inspirat en el Mediterrani",
     "products": [
-      { "name": "Estrella de Mar", "desc": "Amb vidres de platja reals", "tag": "Exclusiva" },
-      { "name": "Espiral de Mar", "desc": "Inspirada en els cargols de mar", "tag": "Nova" },
-      { "name": "Cargol de Mar", "desc": "Efecte marbre · Tots els colors", "tag": "Bestseller" },
-      { "name": "Curculla XL", "desc": "L'espelma més gran de la col·lecció", "tag": "Gran format" },
-      { "name": "Corna", "desc": "Amb vidres de colors de les nostres platges", "tag": "" },
-      { "name": "Eriçó de Mar", "desc": "Silueta mediterrània", "tag": "" }
+      {
+        "name": "Estrella de Mar",
+        "desc": "Amb vidres de platja reals",
+        "tag": "Exclusiva"
+      },
+      {
+        "name": "Espiral de Mar",
+        "desc": "Inspirada en els cargols de mar",
+        "tag": "Nova"
+      },
+      {
+        "name": "Cargol de Mar",
+        "desc": "Efecte marbre · Tots els colors",
+        "tag": "Bestseller"
+      },
+      {
+        "name": "Curculla XL",
+        "desc": "L'espelma més gran de la col·lecció",
+        "tag": "Gran format"
+      },
+      {
+        "name": "Corna",
+        "desc": "Amb vidres de colors de les nostres platges",
+        "tag": ""
+      },
+      {
+        "name": "Eriçó de Mar",
+        "desc": "Silueta mediterrània",
+        "tag": ""
+      }
     ],
     "cta": "Veure tots els productes"
   },

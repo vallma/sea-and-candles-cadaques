@@ -6,4 +6,7 @@ export default defineConfig({
   migrations: {
     path: "prisma/migrations",
   },
+  datasource: {
+    url: process.env.DATABASE_URL ?? "postgresql://adriavallma@localhost:5432/seaandcandles",
+  },
 });

@@ -1,8 +1,16 @@
 import { PrismaClient } from "@/generated/prisma";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { Pool } from "pg";
+
+// Si DATABASE_URL és un placeholder (conté USER o PASSWORD literals), usem la URL local
+const envUrl = process.env.DATABASE_URL ?? "";
+const DB_URL = envUrl.includes("USER") || envUrl.includes("PASSWORD") || !envUrl
+  ? "postgresql://adriavallma@localhost:5432/seaandcandles"
+  : envUrl;
 
 function createPrismaClient() {
-  const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
+  const pool = new Pool({ connectionString: DB_URL });
+  const adapter = new PrismaPg(pool);
   return new PrismaClient({ adapter });
 }
 

@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
-import { deleteProduct } from "@/lib/actions/product";
+import DeleteProductButton from "@/components/admin/DeleteProductButton";
+
 
 export const dynamic = "force-dynamic";
 
@@ -87,13 +88,7 @@ export default async function AdminProductsPage() {
                           className="text-xs text-blue-500 hover:text-blue-700 transition-colors">
                           Editar
                         </Link>
-                        <form action={deleteProduct.bind(null, p.id)}>
-                          <button type="submit"
-                            className="text-xs text-red-400 hover:text-red-600 transition-colors"
-                            onClick={(e) => { if (!confirm(`Eliminar "${p.name}"?`)) e.preventDefault(); }}>
-                            Eliminar
-                          </button>
-                        </form>
+                        <DeleteProductButton id={p.id} name={p.name} />
                       </div>
                     </td>
                   </tr>

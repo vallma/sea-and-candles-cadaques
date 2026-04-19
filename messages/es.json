@@ -1,5 +1,9 @@
 {
-  "nav": { "products": "Colección", "cart": "Carrito", "about": "Nosotros" },
+  "nav": {
+    "products": "Colección",
+    "cart": "Carrito",
+    "about": "Nosotros"
+  },
   "hero": {
     "origin": "Cadaqués · Costa Brava · Cataluña",
     "tagline": "Hecho con amor en Cadaqués",
@@ -23,19 +27,45 @@
     "local_text": "Cada pieza se crea a mano en el taller de Cadaqués, en el corazón del Parque Natural de Cap de Creus."
   },
   "collection": {
-    "label": "Colección",
+    "label": "Mostrador",
     "title": "Inspirado en el Mediterráneo",
     "products": [
-      { "name": "Estrella de Mar", "desc": "Con cristales de playa reales", "tag": "Exclusiva" },
-      { "name": "Espiral de Mar", "desc": "Inspirada en los caracoles de mar", "tag": "Nueva" },
-      { "name": "Caracol de Mar", "desc": "Efecto mármol · Todos los colores", "tag": "Bestseller" },
-      { "name": "Curculla XL", "desc": "La vela más grande de la colección", "tag": "Gran formato" },
-      { "name": "Corna", "desc": "Con cristales de colores de nuestras playas", "tag": "" },
-      { "name": "Erizo de Mar", "desc": "Silueta mediterránea", "tag": "" }
+      {
+        "name": "Estrella de Mar",
+        "desc": "Con cristales de playa reales",
+        "tag": "Exclusiva"
+      },
+      {
+        "name": "Espiral de Mar",
+        "desc": "Inspirada en los caracoles de mar",
+        "tag": "Nueva"
+      },
+      {
+        "name": "Caracol de Mar",
+        "desc": "Efecto mármol · Todos los colores",
+        "tag": "Bestseller"
+      },
+      {
+        "name": "Curculla XL",
+        "desc": "La vela más grande de la colección",
+        "tag": "Gran formato"
+      },
+      {
+        "name": "Corna",
+        "desc": "Con cristales de colores de nuestras playas",
+        "tag": ""
+      },
+      {
+        "name": "Erizo de Mar",
+        "desc": "Silueta mediterránea",
+        "tag": ""
+      }
     ],
     "cta": "Ver todos los productos"
   },
-  "gallery": { "label": "El proceso" },
+  "gallery": {
+    "label": "El proceso"
+  },
   "footer": {
     "bio": "Velas artesanales hechas con cera de soja y resina Jesmonite ecológica. Biodegradables y siempre respetando el medio ambiente.",
     "rights": "Todos los derechos reservados"

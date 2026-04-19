@@ -1,5 +1,9 @@
 {
-  "nav": { "products": "Collection", "cart": "Cart", "about": "About" },
+  "nav": {
+    "products": "Collection",
+    "cart": "Cart",
+    "about": "About"
+  },
   "hero": {
     "origin": "Cadaqués · Costa Brava · Catalonia",
     "tagline": "Made with love in Cadaqués",
@@ -23,19 +27,45 @@
     "local_text": "Every piece is handcrafted in our Cadaqués studio, in the heart of Cap de Creus Natural Park."
   },
   "collection": {
-    "label": "Collection",
+    "label": "Showcase",
     "title": "Inspired by the Mediterranean",
     "products": [
-      { "name": "Sea Star", "desc": "With real beach glass", "tag": "Exclusive" },
-      { "name": "Sea Spiral", "desc": "Inspired by sea snails", "tag": "New" },
-      { "name": "Sea Snail", "desc": "Marble effect · All colors", "tag": "Bestseller" },
-      { "name": "Curculla XL", "desc": "The largest candle in the collection", "tag": "Large format" },
-      { "name": "Corna", "desc": "With colored glass from our beaches", "tag": "" },
-      { "name": "Sea Urchin", "desc": "Mediterranean silhouette", "tag": "" }
+      {
+        "name": "Sea Star",
+        "desc": "With real beach glass",
+        "tag": "Exclusive"
+      },
+      {
+        "name": "Sea Spiral",
+        "desc": "Inspired by sea snails",
+        "tag": "New"
+      },
+      {
+        "name": "Sea Snail",
+        "desc": "Marble effect · All colors",
+        "tag": "Bestseller"
+      },
+      {
+        "name": "Curculla XL",
+        "desc": "The largest candle in the collection",
+        "tag": "Large format"
+      },
+      {
+        "name": "Corna",
+        "desc": "With colored glass from our beaches",
+        "tag": ""
+      },
+      {
+        "name": "Sea Urchin",
+        "desc": "Mediterranean silhouette",
+        "tag": ""
+      }
     ],
-    "cta": "View all products"
+    "cta": "See all products"
   },
-  "gallery": { "label": "The process" },
+  "gallery": {
+    "label": "The process"
+  },
   "footer": {
     "bio": "Handcrafted candles made with soy wax and ecological Jesmonite resin. Biodegradable and always respectful of the environment.",
     "rights": "All rights reserved"

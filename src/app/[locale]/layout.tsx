@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
   title: "Sea & Candles",
@@ -35,14 +32,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-stone-50 text-stone-800">
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <CartProvider>
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </CartProvider>
+    </NextIntlClientProvider>
   );
 }
