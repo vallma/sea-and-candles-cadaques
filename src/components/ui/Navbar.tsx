@@ -17,9 +17,7 @@ export default function Navbar() {
   const t = useTranslations("navbar");
 
   function switchLocale(next: string) {
-    const segments = pathname.split("/");
-    segments[1] = next;
-    router.push(segments.join("/") || "/");
+    router.replace(pathname, { locale: next });
   }
 
   return (
