@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import { SeaWidgetCompact, SeaWidgetFull } from "@/components/ui/SeaWidget";
 import FamiliesGrid from "@/components/ui/FamiliesGrid";
@@ -411,33 +412,14 @@ export default async function Home({
           6. CLOSING QUOTE
       ═══════════════════════════════════════ */}
       <section className="section-pad-lg" style={{ paddingBottom: 100, textAlign: "center" }}>
-        {/* S&C Monogram SVG */}
-        <svg
-          width="44"
-          height="44"
-          viewBox="0 0 40 40"
-          style={{ margin: "0 auto 40px", display: "block" }}
-        >
-          <circle
-            cx="20"
-            cy="20"
-            r="18.5"
-            fill="none"
-            stroke="var(--sea)"
-            strokeWidth="0.8"
-          />
-          <text
-            x="20"
-            y="25"
-            textAnchor="middle"
-            fontFamily="var(--font-cormorant, 'Cormorant Garamond', serif)"
-            fontSize="16"
-            fill="var(--sea)"
-            fontStyle="italic"
-          >
-            S&amp;C
-          </text>
-        </svg>
+        <Image
+          src="/logo.jpg"
+          alt="Sea & Candles"
+          width={64}
+          height={64}
+          className="rounded-full object-cover"
+          style={{ margin: "0 auto 40px", display: "block", border: "1px solid var(--rule)" }}
+        />
 
         <blockquote style={{ margin: "0 auto", maxWidth: 680 }}>
           <p

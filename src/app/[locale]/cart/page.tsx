@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useCart } from "@/lib/cart-context";
 import { createOrder } from "@/lib/actions/order";
 import Link from "next/link";
+import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
@@ -48,10 +49,14 @@ export default function CartPage() {
     return (
       <div className="page" style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: 40, textAlign: "center" }}>
         <div style={{ maxWidth: 500 }}>
-          <svg width="44" height="44" viewBox="0 0 40 40">
-            <circle cx="20" cy="20" r="18.5" fill="none" stroke="var(--sea)" strokeWidth="0.8"/>
-            <text x="20" y="25" textAnchor="middle" fontFamily="var(--font-cormorant, Cormorant Garamond, serif)" fontSize="16" fill="var(--sea)" fontStyle="italic">S&amp;C</text>
-          </svg>
+          <Image
+            src="/logo.jpg"
+            alt="Sea & Candles"
+            width={64}
+            height={64}
+            className="rounded-full object-cover"
+            style={{ margin: "0 auto", display: "block", border: "1px solid var(--rule)" }}
+          />
           <div className="mono" style={{ color: "var(--mute)", marginTop: 32, marginBottom: 14 }}>{t("emptyEyebrow")}</div>
           <h1 className="serif" style={{ fontSize: 56, margin: 0, lineHeight: 1, letterSpacing: "-0.02em" }}
             dangerouslySetInnerHTML={{ __html: t.raw("emptyTitle") }}
