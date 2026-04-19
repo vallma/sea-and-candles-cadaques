@@ -28,14 +28,7 @@ export default function Footer() {
       }}
     >
       <div className="wrap">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.4fr 1fr 1fr 1.3fr",
-            gap: 60,
-            paddingBottom: 64,
-          }}
-        >
+        <div className="footer-grid">
           {/* Col 1 – Brand story */}
           <div>
             <div
@@ -146,9 +139,9 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div
+        className="footer-bottom"
         style={{
           borderTop: "1px solid var(--rule)",
-          padding: "18px 40px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

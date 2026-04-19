@@ -25,7 +25,7 @@ export default async function Home({
       {/* ═══════════════════════════════════════
           1. HERO
       ═══════════════════════════════════════ */}
-      <section style={{ padding: "40px 40px 80px" }}>
+      <section className="section-pad" style={{ paddingBottom: 80 }}>
         <div className="grid-2-hero wrap-wide" style={{ maxWidth: 1600, margin: "0 auto" }}>
           {/* Left: editorial text */}
           <div>
@@ -121,7 +121,7 @@ export default async function Home({
       {/* ═══════════════════════════════════════
           2. FEATURED PRODUCTS
       ═══════════════════════════════════════ */}
-      <section style={{ padding: "80px 40px", background: "var(--bg-2)" }}>
+      <section className="section-pad" style={{ background: "var(--bg-2)" }}>
         <div style={{ maxWidth: 1380, margin: "0 auto" }}>
           {/* Section header */}
           <div
@@ -255,7 +255,7 @@ export default async function Home({
       {/* ═══════════════════════════════════════
           3. EDITORIAL SPLIT — Process / Craft
       ═══════════════════════════════════════ */}
-      <section style={{ padding: "120px 40px" }}>
+      <section className="section-pad-lg">
         <div className="grid-2 wrap" style={{ maxWidth: 1380, margin: "0 auto", alignItems: "center" }}>
           {/* Left: process video */}
           <video
@@ -332,7 +332,7 @@ export default async function Home({
       {/* ═══════════════════════════════════════
           4. SEA WIDGET SECTION
       ═══════════════════════════════════════ */}
-      <section style={{ padding: "60px 40px 120px" }}>
+      <section className="section-pad" style={{ paddingBottom: 120 }}>
         <div className="grid-2-sea wrap" style={{ maxWidth: 1380, margin: "0 auto" }}>
           {/* Left: editorial text */}
           <div>
@@ -390,7 +390,7 @@ export default async function Home({
       {/* ═══════════════════════════════════════
           5. FAMILIES OLFACTIVES GRID
       ═══════════════════════════════════════ */}
-      <section style={{ padding: "80px 40px", background: "var(--bg-2)" }}>
+      <section className="section-pad" style={{ background: "var(--bg-2)" }}>
         <div style={{ maxWidth: 1380, margin: "0 auto" }}>
           <div style={{ marginBottom: 48 }}>
             <div className="mono eyebrow" style={{ marginBottom: 16 }}>
@@ -410,7 +410,7 @@ export default async function Home({
       {/* ═══════════════════════════════════════
           6. CLOSING QUOTE
       ═══════════════════════════════════════ */}
-      <section style={{ padding: "160px 40px 100px", textAlign: "center" }}>
+      <section className="section-pad-lg" style={{ paddingBottom: 100, textAlign: "center" }}>
         {/* S&C Monogram SVG */}
         <svg
           width="44"

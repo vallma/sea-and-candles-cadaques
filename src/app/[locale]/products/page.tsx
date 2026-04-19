@@ -37,10 +37,10 @@ export default async function ProductsPage({ params, searchParams }: Props) {
   return (
     <div className="page">
       {/* Header */}
-      <section style={{ padding: "60px 40px 40px" }}>
+      <section className="section-pad" style={{ paddingBottom: 40 }}>
         <div className="wrap-wide">
           <div className="mono eyebrow" style={{ marginBottom: 20 }}>{t("eyebrow")}</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 60, alignItems: "end" }}>
+          <div className="products-header-grid">
             <h1
               className="serif"
               style={{
@@ -67,7 +67,7 @@ export default async function ProductsPage({ params, searchParams }: Props) {
       </Suspense>
 
       {/* Grid */}
-      <section style={{ padding: "60px 40px 80px" }}>
+      <section className="section-pad" style={{ paddingTop: 60 }}>
         <div className="wrap-wide">
           {products.length === 0 ? (
             <div style={{ textAlign: "center", padding: "80px 0" }}>

@@ -69,7 +69,7 @@ export default function CartPage() {
 
   return (
     <div className="page" style={{ minHeight: "100vh" }}>
-      <section style={{ padding: "60px 40px 80px" }}>
+      <section className="section-pad" style={{ paddingTop: 60 }}>
         <div className="wrap" style={{ maxWidth: 1100 }}>
 
           {/* Header */}
@@ -80,7 +80,7 @@ export default function CartPage() {
             {t("cartTitle")}
           </h1>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 80, alignItems: "start" }}>
+          <div className="cart-layout">
 
             {/* LEFT: Items list */}
             <div style={{ borderTop: "1px solid var(--rule)" }}>

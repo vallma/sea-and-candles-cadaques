@@ -32,7 +32,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   return (
     <div className="page">
       {/* Breadcrumb */}
-      <div style={{ padding: "24px 40px" }} className="mono">
+      <div className="mono breadcrumb-pad">
         <div className="wrap-wide" style={{ color: "var(--mute)" }}>
           <Link href={`/${locale}`}>{t("breadcrumbHome")}</Link>
           {" / "}
@@ -45,11 +45,8 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </div>
       </div>
 
-      <section style={{ padding: "0 40px 80px" }}>
-        <div
-          className="wrap-wide"
-          style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 80 }}
-        >
+      <section className="section-pad" style={{ paddingTop: 0 }}>
+        <div className="wrap-wide product-detail-grid">
           {/* LEFT: ImageGallery */}
           <ImageGallery images={product.images} name={product.name} />
 
