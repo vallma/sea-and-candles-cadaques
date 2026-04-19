@@ -2,8 +2,11 @@ export const dynamic = "force-dynamic";
 
 import Image from "next/image";
 import SeaUrchinCandle from "@/components/ui/SeaUrchinCandle";
+import { getTranslations } from "next-intl/server";
 
-export default function QuiSomPage() {
+export default async function QuiSomPage() {
+  const t = await getTranslations("quiSom");
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#faf6ef" }}>
       {/* Hero */}
@@ -19,13 +22,13 @@ export default function QuiSomPage() {
             className="text-xs tracking-[0.4em] uppercase mb-6"
             style={{ color: "#a08060" }}
           >
-            Cadaqués · Costa Brava · Catalunya
+            {t("eyebrow")}
           </p>
           <h1
             className="text-5xl sm:text-6xl font-light mb-6"
             style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
           >
-            Qui som
+            {t("title")}
           </h1>
           <div
             className="w-12 h-px mx-auto mb-8"
@@ -35,13 +38,12 @@ export default function QuiSomPage() {
             className="text-base sm:text-lg font-light leading-relaxed"
             style={{ color: "#6b4f35" }}
           >
-            Espelmes artesanals fetes a mà, al ritme del Mediterrani.
-            Inspirades en el mar de Cadaqués, creades amb amor i cera de soja natural.
+            {t("subtitle")}
           </p>
         </div>
       </section>
 
-      {/* La nostra historia */}
+      {/* Our story */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col sm:flex-row items-start gap-12">
@@ -50,13 +52,13 @@ export default function QuiSomPage() {
                 className="text-[10px] tracking-[0.35em] uppercase mb-4"
                 style={{ color: "#a08060" }}
               >
-                Els nostres orígens
+                {t("originsEyebrow")}
               </p>
               <h2
                 className="text-3xl font-light mb-6"
                 style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
               >
-                La nostra història
+                {t("originsTitle")}
               </h2>
               <div
                 className="w-8 h-px mb-8"
@@ -66,23 +68,9 @@ export default function QuiSomPage() {
                 className="space-y-5 text-sm font-light leading-relaxed"
                 style={{ color: "#6b4f35" }}
               >
-                <p>
-                  Sea & Candles va néixer a Cadaqués, un dels pobles més bells de la Costa
-                  Brava, arran de la passió per l'artesania i la connexió profunda amb el
-                  Mediterrani. El mar sempre ha estat la nostra font d'inspiració: els seus
-                  colors, les seves textures, la seva calma.
-                </p>
-                <p>
-                  Tot va començar amb ganes d'aprendre a treballar la cera de soja i les
-                  resines de Jesmonita. Hores al taller, proves de colors, aromes que
-                  evocaven sal, brisa i pedra. Poc a poc, les espelmes van agafar forma
-                  pròpia —formes marines, textures naturals, essències del Mediterrani.
-                </p>
-                <p>
-                  Avui, cada espelma que fem porta el mateix esperit: feta amb cura, sense
-                  pressa, amb materials naturals i sostenibles. Perquè creiem que les coses
-                  boniques necessiten temps i intenció.
-                </p>
+                <p>{t("story1")}</p>
+                <p>{t("story2")}</p>
+                <p>{t("story3")}</p>
               </div>
             </div>
             <div className="hidden sm:flex flex-col items-center gap-6 pt-8">
@@ -98,14 +86,14 @@ export default function QuiSomPage() {
                 className="text-[9px] tracking-[0.3em] uppercase text-center"
                 style={{ color: "#a08060" }}
               >
-                Fet amb amor
+                {t("madeWithLove")}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Els nostres valors */}
+      {/* Our values */}
       <section
         className="py-20 px-6"
         style={{ backgroundColor: "#f0e9dc" }}
@@ -116,13 +104,13 @@ export default function QuiSomPage() {
               className="text-[10px] tracking-[0.35em] uppercase mb-4"
               style={{ color: "#a08060" }}
             >
-              El que ens mou
+              {t("valuesEyebrow")}
             </p>
             <h2
               className="text-3xl font-light"
               style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
             >
-              Els nostres valors
+              {t("valuesTitle")}
             </h2>
             <div
               className="w-8 h-px mx-auto mt-6"
@@ -131,7 +119,7 @@ export default function QuiSomPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {/* Artesania */}
+            {/* Craft */}
             <div
               className="flex flex-col items-center text-center p-8 rounded-sm"
               style={{ backgroundColor: "#e8ddd0" }}
@@ -143,7 +131,7 @@ export default function QuiSomPage() {
                 className="text-lg font-light mb-3 tracking-wide"
                 style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
               >
-                Artesania
+                {t("craftTitle")}
               </h3>
               <div
                 className="w-6 h-px mx-auto mb-4"
@@ -153,13 +141,11 @@ export default function QuiSomPage() {
                 className="text-xs font-light leading-relaxed"
                 style={{ color: "#6b4f35" }}
               >
-                Cada peça és única i feta a mà. Ens prenem el temps necessari per
-                garantir la qualitat i el detall que mereix cada espelma. No fem
-                producció en massa — fem artesania real.
+                {t("craftText")}
               </p>
             </div>
 
-            {/* Natura */}
+            {/* Nature */}
             <div
               className="flex flex-col items-center text-center p-8 rounded-sm"
               style={{ backgroundColor: "#e8ddd0" }}
@@ -171,7 +157,7 @@ export default function QuiSomPage() {
                 className="text-lg font-light mb-3 tracking-wide"
                 style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
               >
-                Natura
+                {t("naturTitle")}
               </h3>
               <div
                 className="w-6 h-px mx-auto mb-4"
@@ -181,9 +167,7 @@ export default function QuiSomPage() {
                 className="text-xs font-light leading-relaxed"
                 style={{ color: "#6b4f35" }}
               >
-                Utilitzem cera de soja natural, mines de cotó i fragàncies
-                lliures de substàncies nocives. Respectem el medi ambient en cada
-                decisió, des dels materials fins als embalatges.
+                {t("naturText")}
               </p>
             </div>
 
@@ -199,7 +183,7 @@ export default function QuiSomPage() {
                 className="text-lg font-light mb-3 tracking-wide"
                 style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
               >
-                Cadaqués
+                {t("cadaquesTitle")}
               </h3>
               <div
                 className="w-6 h-px mx-auto mb-4"
@@ -209,29 +193,27 @@ export default function QuiSomPage() {
                 className="text-xs font-light leading-relaxed"
                 style={{ color: "#6b4f35" }}
               >
-                Som fills del Cap de Creus. El nostre poble, la seva llum, les
-                seves cales i el seu caràcter mediterrani impregnen cada creació.
-                Cadaqués no és només on vivim — és d'on venim.
+                {t("cadaquesText")}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Equip / Fundadora */}
+      {/* Team / Founder */}
       <section className="py-20 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p
             className="text-[10px] tracking-[0.35em] uppercase mb-4"
             style={{ color: "#a08060" }}
           >
-            Darrere de cada espelma
+            {t("teamEyebrow")}
           </p>
           <h2
             className="text-3xl font-light mb-6"
             style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
           >
-            Les nostres mans
+            {t("teamTitle")}
           </h2>
           <div
             className="w-8 h-px mx-auto mb-10"
@@ -247,23 +229,19 @@ export default function QuiSomPage() {
             className="text-sm font-light leading-relaxed mb-6"
             style={{ color: "#6b4f35" }}
           >
-            Som un projecte petit, fet amb gran estima. Darrere de Sea & Candles
-            hi ha una artesana de Cadaqués amb passió per la creativitat manual,
-            els aromes naturals i la bellesa de les coses simples.
+            {t("teamText1")}
           </p>
           <p
             className="text-sm font-light leading-relaxed"
             style={{ color: "#6b4f35" }}
           >
-            Cada espelma que surte del taller ha passat per les nostres mans, ha
-            estat cuidada, olida i aprovada. No existeix cap peça que no hàgim
-            gaudit de fer.
+            {t("teamText2")}
           </p>
           <p
             className="text-[10px] tracking-[0.25em] uppercase mt-8"
             style={{ color: "#a08060", fontFamily: "Georgia, serif", fontStyle: "italic" }}
           >
-            — Fet amb amor a Cadaqués
+            {t("teamSignature")}
           </p>
         </div>
       </section>
@@ -279,14 +257,13 @@ export default function QuiSomPage() {
             className="text-2xl font-light mb-4"
             style={{ fontFamily: "Georgia, serif", color: "#3d2b1f" }}
           >
-            Vine a conèixer-nos
+            {t("ctaTitle")}
           </h2>
           <p
             className="text-sm font-light leading-relaxed mb-10"
             style={{ color: "#6b4f35" }}
           >
-            Descobreix les nostres espelmes artesanals i porta una mica de
-            Cadaqués a casa teva.
+            {t("ctaText")}
           </p>
           <a
             href="/products"
@@ -296,7 +273,7 @@ export default function QuiSomPage() {
               color: "#faf6ef",
             }}
           >
-            Veure la col·lecció
+            {t("ctaBtn")}
           </a>
         </div>
       </section>

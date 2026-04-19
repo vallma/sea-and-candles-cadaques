@@ -4,11 +4,13 @@ import { prisma } from "@/lib/prisma";
 import AddToCartForm from "@/components/product/AddToCartForm";
 import ImageGallery from "@/components/product/ImageGallery";
 import RelatedProducts from "@/components/product/RelatedProducts";
+import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string; locale: string }> }) {
   const { id, locale } = await params;
+  const t = await getTranslations("product");
 
   const [product, related] = await Promise.all([
     prisma.product.findUnique({
@@ -32,9 +34,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       {/* Breadcrumb */}
       <div style={{ padding: "24px 40px" }} className="mono">
         <div className="wrap-wide" style={{ color: "var(--mute)" }}>
-          <Link href={`/${locale}`}>Casa</Link>
+          <Link href={`/${locale}`}>{t("breadcrumbHome")}</Link>
           {" / "}
-          <Link href={`/${locale}/products`} style={{ margin: "0 6px" }}>Botiga</Link>
+          <Link href={`/${locale}/products`} style={{ margin: "0 6px" }}>{t("breadcrumbShop")}</Link>
           {product.category && (
             <>/ <span style={{ marginRight: 6 }}>{product.category}</span></>
           )}
@@ -55,7 +57,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <div style={{ position: "sticky", top: 100, alignSelf: "start" }}>
             {product.category && (
               <div className="mono eyebrow" style={{ marginBottom: 14 }}>
-                {product.category} · Col·lecció 2026
+                {product.category} · {t("collection")}
               </div>
             )}
             <h1
@@ -88,7 +90,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             {/* Materials as "olfactive notes" grid */}
             {product.materials.length > 0 && (
               <div style={{ marginTop: 28 }}>
-                <div className="mono eyebrow" style={{ marginBottom: 14 }}>Materials</div>
+                <div className="mono eyebrow" style={{ marginBottom: 14 }}>{t("materials")}</div>
                 <div
                   style={{
                     display: "grid",
@@ -104,7 +106,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                         className="mono"
                         style={{ color: "var(--mute)", marginBottom: 6, fontSize: 9 }}
                       >
-                        {(["Principal", "Secundari", "Base"] as const)[i] ?? `N° ${i + 1}`}
+                        {([t("matPrimary"), t("matSecondary"), t("matBase")] as const)[i] ?? `N° ${i + 1}`}
                       </div>
                       <div className="serif" style={{ fontSize: 18 }}>{m}</div>
                     </div>
@@ -148,28 +150,28 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               {product.burningTime && (
                 <div>
                   <div className="mono" style={{ color: "var(--mute)", marginBottom: 4 }}>
-                    Temps crema
+                    {t("burnTime")}
                   </div>
                   <div>{product.burningTime}h</div>
                 </div>
               )}
               {product.weight && (
                 <div>
-                  <div className="mono" style={{ color: "var(--mute)", marginBottom: 4 }}>Pes</div>
+                  <div className="mono" style={{ color: "var(--mute)", marginBottom: 4 }}>{t("weight")}</div>
                   <div>{product.weight}g</div>
                 </div>
               )}
               {product.dimensions && (
                 <div>
                   <div className="mono" style={{ color: "var(--mute)", marginBottom: 4 }}>
-                    Dimensions
+                    {t("dimensions")}
                   </div>
                   <div>{product.dimensions}</div>
                 </div>
               )}
               <div>
-                <div className="mono" style={{ color: "var(--mute)", marginBottom: 4 }}>Fet a</div>
-                <div>Cadaqués, Girona</div>
+                <div className="mono" style={{ color: "var(--mute)", marginBottom: 4 }}>{t("madeIn")}</div>
+                <div>{t("madeInPlace")}</div>
               </div>
             </div>
 

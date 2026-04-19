@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function Footer() {
   const locale = useLocale();
+  const t = useTranslations("footer");
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
 
@@ -52,57 +53,57 @@ export default function Footer() {
                 maxWidth: 260,
               }}
             >
-              Espelmes artesanals fetes a mà a Cadaqués, inspirades en el paisatge de la Costa Brava i elaborades amb cera de soja 100% ecològica.
+              {t("bio")}
             </p>
             <div className="mono" style={{ color: "var(--mute)" }}>
-              Est. 2024 · Costa Brava
+              {t("est")}
             </div>
           </div>
 
-          {/* Col 2 – Botiga */}
+          {/* Col 2 – Shop */}
           <div>
             <div
               className="mono"
               style={{ color: "var(--mute)", marginBottom: 20 }}
             >
-              Botiga
+              {t("shopCol")}
             </div>
             <nav style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               <Link href={`/${locale}/products`} className="nav-link">
-                Tots els productes
+                {t("allProducts")}
               </Link>
               <Link href={`/${locale}/products?family=marina`} className="nav-link">
-                Família Marina
+                {t("familyMarina")}
               </Link>
               <Link href={`/${locale}/products?family=floral`} className="nav-link">
-                Família Floral
+                {t("familyFloral")}
               </Link>
               <Link href={`/${locale}/products?family=herbes`} className="nav-link">
-                Família Herbes
+                {t("familyHerbes")}
               </Link>
             </nav>
           </div>
 
-          {/* Col 3 – Casa */}
+          {/* Col 3 – House */}
           <div>
             <div
               className="mono"
               style={{ color: "var(--mute)", marginBottom: 20 }}
             >
-              Casa
+              {t("houseCol")}
             </div>
             <nav style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               <Link href={`/${locale}/qui-som`} className="nav-link">
-                La nostra història
+                {t("ourHistory")}
               </Link>
               <Link href={`/${locale}/qui-som#ingredients`} className="nav-link">
-                Ingredients
+                {t("ingredients")}
               </Link>
               <Link href={`/${locale}/qui-som#enviaments`} className="nav-link">
-                Enviaments
+                {t("shipping")}
               </Link>
               <Link href={`mailto:sea.andcandles@gmail.com`} className="nav-link">
-                Contacte
+                {t("contact")}
               </Link>
             </nav>
           </div>
@@ -113,21 +114,21 @@ export default function Footer() {
               className="mono"
               style={{ color: "var(--mute)", marginBottom: 20 }}
             >
-              Butlletí
+              {t("newsletterCol")}
             </div>
             <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.7, marginBottom: 20 }}>
-              Novetats de temporada, noves aromes i històries de la costa.
+              {t("newsletterText")}
             </p>
             {sent ? (
               <div className="mono" style={{ color: "var(--sea)" }}>
-                Gràcies! Aviat rebràs novetats.
+                {t("newsletterThanks")}
               </div>
             ) : (
               <form onSubmit={handleNewsletter} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <input
                   type="email"
                   required
-                  placeholder="el.teu@correu.cat"
+                  placeholder={t("newsletterPlaceholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   style={{
@@ -141,7 +142,7 @@ export default function Footer() {
                   }}
                 />
                 <button type="submit" className="btn btn-primary" style={{ justifyContent: "center" }}>
-                  Subscriure&apos;m
+                  {t("newsletterBtn")}
                 </button>
               </form>
             )}
@@ -164,18 +165,18 @@ export default function Footer() {
         }}
       >
         <span className="mono" style={{ color: "var(--mute)" }}>
-          © 2026 Sea&amp;Candles Cadaqués
+          {t("copyright")}
         </span>
         <a href="mailto:sea.andcandles@gmail.com" className="nav-link mono" style={{ fontSize: 11 }}>
           sea.andcandles@gmail.com
         </a>
         <span style={{ display: "flex", gap: 16 }}>
           <Link href={`/${locale}/privacitat`} className="nav-link mono" style={{ fontSize: 11 }}>
-            Privacitat
+            {t("privacy")}
           </Link>
           <span className="mono" style={{ color: "var(--rule)", fontSize: 11 }}>·</span>
           <Link href={`/${locale}/termes`} className="nav-link mono" style={{ fontSize: 11 }}>
-            Termes
+            {t("terms")}
           </Link>
         </span>
       </div>

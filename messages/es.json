@@ -1,73 +1,173 @@
 {
-  "nav": {
-    "products": "Colección",
-    "cart": "Carrito",
-    "about": "Nosotros"
-  },
-  "hero": {
-    "origin": "Cadaqués · Costa Brava · Cataluña",
-    "tagline": "Hecho con amor en Cadaqués",
-    "subtitle": "Velas artesanales inspiradas en el mar mediterráneo. Cera de soja, resina ecológica y la belleza de Cap de Creus.",
-    "cta": "Descubrir la colección"
-  },
-  "manifest": {
-    "label": "Nuestra filosofía",
-    "title": "Cada vela,\nuna historia del mar",
-    "text": "Vivimos en el Mediterráneo y lo llevamos a tu hogar. Cada pieza nace de la observación de la naturaleza: las formas de los caracoles, la espiral de las conchas, la textura de los erizos. Nada sintético. Nada artificial. Todo hecho a mano, desde cero, con materiales que respetan el mar que nos inspira."
-  },
-  "materials": {
-    "label": "Nuestros materiales",
-    "soja_title": "Cera de soja",
-    "soja_text": "100% de origen vegetal. Arde más limpia y dura más que la cera de parafina.",
-    "jesmonite_title": "Jesmonite®",
-    "jesmonite_text": "La resina más ecológica del mercado. Biodegradable y sin COVs. Los tarros duran para siempre.",
-    "vegan_title": "100% Vegano",
-    "vegan_text": "Nunca usamos elementos orgánicos como caracoles o conchas reales. Todo respetuoso con la vida marina.",
-    "local_title": "Hecho en Cadaqués",
-    "local_text": "Cada pieza se crea a mano en el taller de Cadaqués, en el corazón del Parque Natural de Cap de Creus."
-  },
-  "collection": {
-    "label": "Mostrador",
-    "title": "Inspirado en el Mediterráneo",
-    "products": [
-      {
-        "name": "Estrella de Mar",
-        "desc": "Con cristales de playa reales",
-        "tag": "Exclusiva"
-      },
-      {
-        "name": "Espiral de Mar",
-        "desc": "Inspirada en los caracoles de mar",
-        "tag": "Nueva"
-      },
-      {
-        "name": "Caracol de Mar",
-        "desc": "Efecto mármol · Todos los colores",
-        "tag": "Bestseller"
-      },
-      {
-        "name": "Curculla XL",
-        "desc": "La vela más grande de la colección",
-        "tag": "Gran formato"
-      },
-      {
-        "name": "Corna",
-        "desc": "Con cristales de colores de nuestras playas",
-        "tag": ""
-      },
-      {
-        "name": "Erizo de Mar",
-        "desc": "Silueta mediterránea",
-        "tag": ""
-      }
-    ],
-    "cta": "Ver todos los productos"
-  },
-  "gallery": {
-    "label": "El proceso"
+  "navbar": {
+    "shop": "Tienda",
+    "history": "Historia",
+    "cart": "Carrito"
   },
   "footer": {
-    "bio": "Velas artesanales hechas con cera de soja y resina Jesmonite ecológica. Biodegradables y siempre respetando el medio ambiente.",
-    "rights": "Todos los derechos reservados"
+    "bio": "Velas artesanales hechas a mano en Cadaqués, inspiradas en el paisaje de la Costa Brava y elaboradas con cera de soja 100% ecológica.",
+    "est": "Est. 2024 · Costa Brava",
+    "shopCol": "Tienda",
+    "allProducts": "Todos los productos",
+    "familyMarina": "Familia Marina",
+    "familyFloral": "Familia Floral",
+    "familyHerbes": "Familia Hierbas",
+    "houseCol": "Casa",
+    "ourHistory": "Nuestra historia",
+    "ingredients": "Ingredientes",
+    "shipping": "Envíos",
+    "contact": "Contacto",
+    "newsletterCol": "Boletín",
+    "newsletterText": "Novedades de temporada, nuevos aromas e historias de la costa.",
+    "newsletterPlaceholder": "tu@correo.com",
+    "newsletterBtn": "Suscribirme",
+    "newsletterThanks": "¡Gracias! Pronto recibirás novedades.",
+    "copyright": "© 2026 Sea&Candles Cadaqués",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "home": {
+    "heroEyebrow": "Colección primavera — N° 01",
+    "heroTitle": "La luz<br/><em>de la costa,</em><br/>en una vela.",
+    "heroSubtitle": "Elaboradas a mano en Cadaqués con cera de soja ecológica y esencias inspiradas en la Costa Brava. Cada vela es única, como el paisaje que la inspira.",
+    "heroCtaShop": "Descubre la colección →",
+    "heroCtaAbout": "Nuestra historia",
+    "heroSceneLabel": "Escena N° 07",
+    "heroSceneCaption": "Mediodía en una casa blanca del carrer des Call.",
+    "featuredEyebrow": "Seleccionadas",
+    "featuredTitle": "Cuatro aromas de esta semana",
+    "featuredSeeAll": "Ver todas →",
+    "featuredComingSoon": "Próximamente disponible",
+    "craftEyebrow": "N° 02 — El oficio",
+    "craftTitle": "Cada vela<br/><em>se hace a mano,</em><br/>una a una.",
+    "craftText": "Usamos cera de soja 100% ecológica, libre de parafinas y toxinas. Cada vela arde entre 45 y 55 horas, emitiendo hasta un 80% menos de CO₂ que las velas convencionales.",
+    "statSojLabel": "Cera de soja",
+    "statParLabel": "Parafinas",
+    "statBurnLabel": "Duración media",
+    "statCO2Label": "vs. parafina",
+    "seaEyebrow": "N° 03 — El mar",
+    "seaTitle": "Ahora mismo<br/><em>en nuestra cala.</em>",
+    "seaText": "Nuestros aromas nacen de observar el Mediterráneo. El estado del mar cada día nos recuerda por qué hacemos lo que hacemos.",
+    "seaQuote": "«El viento decide cómo cae la mecha.»",
+    "seaQuoteAuthor": "— Oriol, fundador",
+    "familiesEyebrow": "N° 04 — Familias olfativas",
+    "familiesTitle": "Cinco maneras de olvidarse del tiempo.",
+    "closingQuote": "«Cuando enciendes una vela nuestra no compras un producto, enciendes un rincón de Cadaqués.»",
+    "closingFootnote": "♡ Hecho con amor en Cadaqués"
+  },
+  "families": {
+    "aromes": "aromas",
+    "explore": "Explorar →",
+    "marina_desc": "Sal, yodo, algas",
+    "floral_desc": "Jazmín, higo, magnolia",
+    "herbes_desc": "Tomillo, romero, pino",
+    "terra_desc": "Olivo, piedra, madera seca",
+    "fusta_desc": "Cedro, pino, cuerda"
+  },
+  "seaWidget": {
+    "water": "Agua",
+    "air": "Aire",
+    "wind": "Viento",
+    "waves": "Oleaje",
+    "temperature": "temperatura",
+    "height": "altura",
+    "sunrise": "Salida",
+    "sunset": "Puesta",
+    "moon": "Creciente"
+  },
+  "products": {
+    "eyebrow": "Tienda · Colección 2026",
+    "title": "Todas las velas",
+    "subtitle": "Velas artesanales hechas a mano en Cadaqués. Cada una en pequeñas tiradas, pensadas para acompañar una hora del día.",
+    "filterAll": "Todas",
+    "sortNewest": "Más nuevas primero",
+    "sortPriceAsc": "Precio ↑",
+    "sortPriceDesc": "Precio ↓",
+    "sortName": "A–Z",
+    "count": "{total} productos",
+    "emptyTitle": "Ninguna vela con estos filtros.",
+    "emptyCta": "Ver todas",
+    "collection": "Colección 2026"
+  },
+  "product": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbShop": "Tienda",
+    "collection": "Colección 2026",
+    "materials": "Materiales",
+    "matPrimary": "Principal",
+    "matSecondary": "Secundario",
+    "matBase": "Base",
+    "burnTime": "Tiempo de combustión",
+    "weight": "Peso",
+    "dimensions": "Dimensiones",
+    "madeIn": "Hecho en",
+    "madeInPlace": "Cadaqués, Girona"
+  },
+  "addToCart": {
+    "quantity": "Cantidad",
+    "addToCart": "Añadir al carrito",
+    "added": "✓ Añadido",
+    "viewCart": "Carrito",
+    "outOfStock": "(agotado)",
+    "forOptions": "por opciones"
+  },
+  "cart": {
+    "emptyEyebrow": "El carrito está vacío",
+    "emptyTitle": "Todavía no<br/><em style=\"font-weight:500\">has elegido nada.</em>",
+    "emptyText": "Doce aromas hechos a mano te esperan en la tienda.",
+    "emptyCta": "Explorar la tienda →",
+    "itemSingular": "vela",
+    "itemPlural": "velas",
+    "cartTitle": "Tu carrito.",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "shippingCalc": "Calculado al confirmar",
+    "total": "Total",
+    "emailLabel": "Tu email",
+    "emailPlaceholder": "hola@ejemplo.com",
+    "emailError": "Introduce un email válido.",
+    "orderError": "Error al procesar el pedido.",
+    "checkoutBtn": "Confirmar pedido · {price} €",
+    "processing": "Procesando...",
+    "continueShopping": "Seguir comprando",
+    "vatNote": "IVA incluido · Envases reutilizables",
+    "summary": "Resumen",
+    "remove": "Eliminar"
+  },
+  "confirmation": {
+    "eyebrow": "Pedido recibido",
+    "title": "Gracias por tu compra",
+    "text": "Hemos recibido tu pedido y nos pondremos en contacto pronto.",
+    "reference": "Referencia:",
+    "orderSummary": "Resumen",
+    "orderTotal": "Total",
+    "continueShopping": "Seguir comprando"
+  },
+  "quiSom": {
+    "eyebrow": "Cadaqués · Costa Brava · Cataluña",
+    "title": "Quiénes somos",
+    "subtitle": "Velas artesanales hechas a mano, al ritmo del Mediterráneo. Inspiradas en el mar de Cadaqués, creadas con amor y cera de soja natural.",
+    "originsEyebrow": "Nuestros orígenes",
+    "originsTitle": "Nuestra historia",
+    "madeWithLove": "Hecho con amor",
+    "story1": "Sea & Candles nació en Cadaqués, uno de los pueblos más bellos de la Costa Brava, a raíz de la pasión por la artesanía y la conexión profunda con el Mediterráneo. El mar siempre ha sido nuestra fuente de inspiración: sus colores, sus texturas, su calma.",
+    "story2": "Todo comenzó con ganas de aprender a trabajar la cera de soja y las resinas de Jesmonita. Horas en el taller, pruebas de colores, aromas que evocaban sal, brisa y piedra. Poco a poco, las velas fueron tomando forma propia —formas marinas, texturas naturales, esencias del Mediterráneo.",
+    "story3": "Hoy, cada vela que hacemos lleva el mismo espíritu: hecha con cuidado, sin prisa, con materiales naturales y sostenibles. Porque creemos que las cosas bonitas necesitan tiempo e intención.",
+    "valuesEyebrow": "Lo que nos mueve",
+    "valuesTitle": "Nuestros valores",
+    "craftTitle": "Artesanía",
+    "craftText": "Cada pieza es única y hecha a mano. Nos tomamos el tiempo necesario para garantizar la calidad y el detalle que merece cada vela. No hacemos producción en masa — hacemos artesanía real.",
+    "naturTitle": "Naturaleza",
+    "naturText": "Usamos cera de soja natural, mechas de algodón y fragancias libres de sustancias nocivas. Respetamos el medio ambiente en cada decisión, desde los materiales hasta los embalajes.",
+    "cadaquesTitle": "Cadaqués",
+    "cadaquesText": "Somos hijos del Cap de Creus. Nuestro pueblo, su luz, sus calas y su carácter mediterráneo impregnan cada creación. Cadaqués no es solo donde vivimos — es de donde venimos.",
+    "teamEyebrow": "Detrás de cada vela",
+    "teamTitle": "Nuestras manos",
+    "teamText1": "Somos un proyecto pequeño, hecho con gran estima. Detrás de Sea & Candles hay una artesana de Cadaqués con pasión por la creatividad manual, los aromas naturales y la belleza de las cosas simples.",
+    "teamText2": "Cada vela que sale del taller ha pasado por nuestras manos, ha sido cuidada, olida y aprobada. No existe ninguna pieza que no hayamos disfrutado hacer.",
+    "teamSignature": "— Hecho con amor en Cadaqués",
+    "ctaTitle": "Ven a conocernos",
+    "ctaText": "Descubre nuestras velas artesanales y lleva un poco de Cadaqués a tu hogar.",
+    "ctaBtn": "Ver la colección"
   }
 }

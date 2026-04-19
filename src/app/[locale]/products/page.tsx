@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import ProductFilter from "@/components/product/ProductFilter";
 import { Suspense } from "react";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -13,6 +14,7 @@ interface Props {
 export default async function ProductsPage({ params, searchParams }: Props) {
   const { locale } = await params;
   const { categoria, ordre } = await searchParams;
+  const t = await getTranslations("products");
 
   const orderBy = ordre === "preu-asc"  ? { price: "asc"  as const }
                 : ordre === "preu-desc" ? { price: "desc" as const }
@@ -37,7 +39,7 @@ export default async function ProductsPage({ params, searchParams }: Props) {
       {/* Header */}
       <section style={{ padding: "60px 40px 40px" }}>
         <div className="wrap-wide">
-          <div className="mono eyebrow" style={{ marginBottom: 20 }}>Botiga · Col·lecció 2026</div>
+          <div className="mono eyebrow" style={{ marginBottom: 20 }}>{t("eyebrow")}</div>
           <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 60, alignItems: "end" }}>
             <h1
               className="serif"
@@ -48,10 +50,10 @@ export default async function ProductsPage({ params, searchParams }: Props) {
                 letterSpacing: "-0.02em",
               }}
             >
-              Totes les espelmes<span style={{ color: "var(--mute)", fontStyle: "italic" }}>.</span>
+              {t("title")}<span style={{ color: "var(--mute)", fontStyle: "italic" }}>.</span>
             </h1>
             <p style={{ fontSize: 15, lineHeight: 1.7, color: "var(--ink-soft)", margin: 0 }}>
-              Espelmes artesanes fetes a mà a Cadaqués. Cadascuna en petites tandes, pensades per acompanyar una hora del dia.
+              {t("subtitle")}
             </p>
           </div>
         </div>
@@ -70,10 +72,10 @@ export default async function ProductsPage({ params, searchParams }: Props) {
           {products.length === 0 ? (
             <div style={{ textAlign: "center", padding: "80px 0" }}>
               <p className="serif" style={{ fontSize: 28, fontStyle: "italic", color: "var(--ink-soft)", marginBottom: 24 }}>
-                Cap espelma amb aquests filtres.
+                {t("emptyTitle")}
               </p>
               <Link href={`/${locale}/products`} className="btn btn-ghost">
-                Veure totes
+                {t("emptyCta")}
               </Link>
             </div>
           ) : (

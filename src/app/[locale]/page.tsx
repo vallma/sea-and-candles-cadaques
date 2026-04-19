@@ -2,6 +2,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { SeaWidgetCompact, SeaWidgetFull } from "@/components/ui/SeaWidget";
 import FamiliesGrid from "@/components/ui/FamiliesGrid";
+import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +12,7 @@ export default async function Home({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const t = await getTranslations("home");
 
   const products = await prisma.product.findMany({
     where: { active: true },
@@ -28,7 +30,7 @@ export default async function Home({
           {/* Left: editorial text */}
           <div>
             <p className="mono eyebrow" style={{ marginBottom: 32 }}>
-              Col·lecció primavera — N° 01
+              {t("heroEyebrow")}
             </p>
             <h1
               className="serif"
@@ -39,7 +41,7 @@ export default async function Home({
                 marginBottom: 40,
               }}
               dangerouslySetInnerHTML={{
-                __html: "La llum<br/><em>de la costa,</em><br/>en una espelma.",
+                __html: t.raw("heroTitle"),
               }}
             />
             <p
@@ -51,14 +53,14 @@ export default async function Home({
                 marginBottom: 40,
               }}
             >
-              Elaborades a mà a Cadaqués amb cera de soja ecològica i essències inspirades en la Costa Brava. Cada espelma és única, com el paisatge que la inspira.
+              {t("heroSubtitle")}
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
               <Link href={`/${locale}/products`} className="btn btn-primary">
-                Descobreix la col·lecció →
+                {t("heroCtaShop")}
               </Link>
               <Link href={`/${locale}/qui-som`} className="btn btn-ghost">
-                La nostra història
+                {t("heroCtaAbout")}
               </Link>
             </div>
           </div>
@@ -91,13 +93,13 @@ export default async function Home({
               }}
             >
               <div className="mono" style={{ color: "var(--mute)", marginBottom: 8 }}>
-                Escena N° 07
+                {t("heroSceneLabel")}
               </div>
               <div
                 className="serif"
                 style={{ fontSize: 20, color: "var(--ink)", lineHeight: 1.3, fontStyle: "italic" }}
               >
-                Migdia a una casa blanca del carrer des Call.
+                {t("heroSceneCaption")}
               </div>
             </div>
           </div>
@@ -132,13 +134,13 @@ export default async function Home({
           >
             <div>
               <div className="mono eyebrow" style={{ marginBottom: 12 }}>
-                Escollides
+                {t("featuredEyebrow")}
               </div>
               <h2
                 className="serif"
                 style={{ fontSize: 56, color: "var(--ink)", lineHeight: 1.05 }}
               >
-                Quatre aromes d&apos;aquesta setmana
+                {t("featuredTitle")}
               </h2>
             </div>
             <Link
@@ -146,7 +148,7 @@ export default async function Home({
               className="nav-link"
               style={{ borderBottom: "1px solid var(--ink)", whiteSpace: "nowrap" }}
             >
-              Veure totes →
+              {t("featuredSeeAll")}
             </Link>
           </div>
 
@@ -156,7 +158,7 @@ export default async function Home({
               ? Array.from({ length: 4 }).map((_, i) => (
                   <div key={i} className="sc-product-card">
                     <div className="ph" style={{ aspectRatio: "4/5", position: "relative" }}>
-                      <span className="ph-label">Aviat disponible</span>
+                      <span className="ph-label">{t("featuredComingSoon")}</span>
                     </div>
                   </div>
                 ))
@@ -274,13 +276,13 @@ export default async function Home({
           {/* Right: editorial text + stats */}
           <div>
             <div className="mono eyebrow" style={{ marginBottom: 24 }}>
-              N° 02 — L&apos;ofici
+              {t("craftEyebrow")}
             </div>
             <h2
               className="serif"
               style={{ fontSize: 64, color: "var(--ink)", lineHeight: 0.95, marginBottom: 32 }}
               dangerouslySetInnerHTML={{
-                __html: "Cada espelma<br/><em>es fa a mà,</em><br/>una a una.",
+                __html: t.raw("craftTitle"),
               }}
             />
             <p
@@ -292,16 +294,16 @@ export default async function Home({
                 marginBottom: 48,
               }}
             >
-              Fem servir cera de soja 100% ecològica, lliure de parafines i toxines. Cada espelma crema entre 45 i 55 hores, emetent fins a un 80% menys de CO₂ que les espelmes convencionals.
+              {t("craftText")}
             </p>
 
             {/* Stats grid */}
             <div className="grid-2" style={{ gap: 0, border: "1px solid var(--rule)" }}>
               {[
-                ["100%", "Cera de soja"],
-                ["0", "Parafines"],
-                ["45-55h", "Cremada mitjana"],
-                ["CO₂ −80%", "vs. parafina"],
+                ["100%", t("statSojLabel")],
+                ["0", t("statParLabel")],
+                ["45-55h", t("statBurnLabel")],
+                ["CO₂ −80%", t("statCO2Label")],
               ].map(([value, label]) => (
                 <div
                   key={label}
@@ -335,13 +337,13 @@ export default async function Home({
           {/* Left: editorial text */}
           <div>
             <div className="mono eyebrow" style={{ marginBottom: 24 }}>
-              N° 03 — El mar
+              {t("seaEyebrow")}
             </div>
             <h2
               className="serif"
               style={{ fontSize: 56, color: "var(--ink)", lineHeight: 1.0, marginBottom: 28 }}
               dangerouslySetInnerHTML={{
-                __html: "Ara mateix<br/><em>a la nostra cala.</em>",
+                __html: t.raw("seaTitle"),
               }}
             />
             <p
@@ -353,7 +355,7 @@ export default async function Home({
                 marginBottom: 32,
               }}
             >
-              Les nostres aromes neixen d&apos;observar el Mediterrani. L&apos;estat del mar cada dia ens recorda per què fem el que fem.
+              {t("seaText")}
             </p>
             <blockquote
               style={{
@@ -372,10 +374,10 @@ export default async function Home({
                   marginBottom: 8,
                 }}
               >
-                «El vent decideix com cau la metxa.»
+                {t("seaQuote")}
               </p>
               <div className="mono" style={{ color: "var(--mute)" }}>
-                — Oriol, fundador
+                {t("seaQuoteAuthor")}
               </div>
             </blockquote>
           </div>
@@ -392,13 +394,13 @@ export default async function Home({
         <div style={{ maxWidth: 1380, margin: "0 auto" }}>
           <div style={{ marginBottom: 48 }}>
             <div className="mono eyebrow" style={{ marginBottom: 16 }}>
-              N° 04 — Famílies olfactives
+              {t("familiesEyebrow")}
             </div>
             <h2
               className="serif"
               style={{ fontSize: 56, color: "var(--ink)", lineHeight: 1.05 }}
             >
-              Cinc maneres d&apos;oblidar-se del temps.
+              {t("familiesTitle")}
             </h2>
           </div>
           <FamiliesGrid locale={locale} />
@@ -448,12 +450,12 @@ export default async function Home({
               marginBottom: 40,
             }}
           >
-            «Quan encens una espelma nostra no compres un producte, encens un racó de Cadaqués.»
+            {t("closingQuote")}
           </p>
         </blockquote>
 
         <div className="mono" style={{ color: "var(--mute)" }}>
-          ♡ Fet amb amor a Cadaqués
+          {t("closingFootnote")}
         </div>
       </section>
     </>

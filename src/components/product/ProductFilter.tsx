@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 interface Props {
   categories: string[];
@@ -12,6 +13,7 @@ export default function ProductFilter({ categories, total }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
+  const t = useTranslations("products");
 
   const activeCategory = params.get("categoria") ?? "";
   const activeSort = params.get("ordre") ?? "";
@@ -46,7 +48,7 @@ export default function ProductFilter({ categories, total }: Props) {
             className={`chip${!activeCategory ? " active" : ""}`}
             onClick={() => update("categoria", "")}
           >
-            Totes
+            {t("filterAll")}
           </button>
           {categories.map((cat) => (
             <button
@@ -77,14 +79,14 @@ export default function ProductFilter({ categories, total }: Props) {
               cursor: "pointer",
             }}
           >
-            <option value="">Més nous primer</option>
-            <option value="preu-asc">Preu ↑</option>
-            <option value="preu-desc">Preu ↓</option>
-            <option value="nom">A–Z</option>
+            <option value="">{t("sortNewest")}</option>
+            <option value="preu-asc">{t("sortPriceAsc")}</option>
+            <option value="preu-desc">{t("sortPriceDesc")}</option>
+            <option value="nom">{t("sortName")}</option>
           </select>
 
           <span className="mono" style={{ fontSize: 10, color: "var(--ink-soft)" }}>
-            {total} productes
+            {t("count", { total })}
           </span>
         </div>
       </div>

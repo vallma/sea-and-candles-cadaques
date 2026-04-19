@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 
 interface SeaData {
   waterTemp: string;
@@ -10,7 +11,6 @@ interface SeaData {
   waveHeight: string;
   sunrise: string;
   sunset: string;
-  moon: string;
   time: string;
 }
 
@@ -32,7 +32,6 @@ function useSeaData(): SeaData {
       waveHeight,
       sunrise: "07:12",
       sunset: "20:48",
-      moon: "Creixent",
       time: `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`,
     };
   }, []);
@@ -40,6 +39,7 @@ function useSeaData(): SeaData {
 
 export function SeaWidgetCompact() {
   const data = useSeaData();
+  const t = useTranslations("seaWidget");
 
   return (
     <div
@@ -56,16 +56,16 @@ export function SeaWidgetCompact() {
       </span>
       <span style={{ width: 1, height: 16, background: "var(--rule)", flexShrink: 0 }} />
       <span className="mono" style={{ color: "var(--ink-soft)", whiteSpace: "nowrap" }}>
-        Aigua {data.waterTemp}°C
+        {t("water")} {data.waterTemp}°C
       </span>
       <span className="mono" style={{ color: "var(--ink-soft)", whiteSpace: "nowrap" }}>
-        Aire {data.airTemp}°C
+        {t("air")} {data.airTemp}°C
       </span>
       <span className="mono" style={{ color: "var(--ink-soft)", whiteSpace: "nowrap" }}>
-        Vent {data.wind} km/h {data.windDir}
+        {t("wind")} {data.wind} km/h {data.windDir}
       </span>
       <span className="mono" style={{ color: "var(--ink-soft)", whiteSpace: "nowrap" }}>
-        Onatge {data.waveHeight} m
+        {t("waves")} {data.waveHeight} m
       </span>
       <span style={{ width: 1, height: 16, background: "var(--rule)", flexShrink: 0 }} />
       <span className="mono" style={{ color: "var(--mute)", whiteSpace: "nowrap" }}>
@@ -77,12 +77,13 @@ export function SeaWidgetCompact() {
 
 export function SeaWidgetFull() {
   const data = useSeaData();
+  const t = useTranslations("seaWidget");
 
   const stats = [
-    { label: "Aigua", value: `${data.waterTemp}°C`, unit: "temperatura" },
-    { label: "Aire", value: `${data.airTemp}°C`, unit: "temperatura" },
-    { label: "Vent", value: `${data.wind} km/h`, unit: data.windDir },
-    { label: "Onatge", value: `${data.waveHeight} m`, unit: "alçada" },
+    { label: t("water"), value: `${data.waterTemp}°C`, unit: t("temperature") },
+    { label: t("air"),   value: `${data.airTemp}°C`,   unit: t("temperature") },
+    { label: t("wind"),  value: `${data.wind} km/h`,   unit: data.windDir      },
+    { label: t("waves"), value: `${data.waveHeight} m`, unit: t("height")      },
   ];
 
   return (
@@ -163,13 +164,13 @@ export function SeaWidgetFull() {
         }}
       >
         <span className="mono" style={{ color: "var(--ink-soft)" }}>
-          ↑ Sortida {data.sunrise}
+          ↑ {t("sunrise")} {data.sunrise}
         </span>
         <span className="mono" style={{ color: "var(--ink-soft)" }}>
-          ↓ Posta {data.sunset}
+          ↓ {t("sunset")} {data.sunset}
         </span>
         <span className="mono" style={{ color: "var(--ink-soft)" }}>
-          ☽ {data.moon}
+          ☽ {t("moon")}
         </span>
       </div>
     </div>

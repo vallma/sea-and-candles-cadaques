@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useCart, CartOption } from "@/lib/cart-context";
 import { useRouter, useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface OptionGroup {
   id: string;
@@ -23,6 +24,7 @@ export default function AddToCartForm({ productId, name, basePrice, image, optio
   const router = useRouter();
   const params = useParams();
   const locale = params.locale as string;
+  const t = useTranslations("addToCart");
 
   const [selected, setSelected] = useState<Record<string, string>>({});
   const [quantity, setQuantity] = useState(1);
@@ -51,19 +53,19 @@ export default function AddToCartForm({ productId, name, basePrice, image, optio
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-      {/* Preu */}
+      {/* Price */}
       <div>
         <span className="serif" style={{ fontSize: 36, color: "var(--ink)" }}>
           {finalPrice.toFixed(2)} €
         </span>
         {extraPrice !== 0 && (
           <span className="mono" style={{ color: "var(--mute)", fontSize: 12, marginLeft: 10 }}>
-            ({extraPrice > 0 ? "+" : ""}{extraPrice.toFixed(2)} € per opcions)
+            ({extraPrice > 0 ? "+" : ""}{extraPrice.toFixed(2)} € {t("forOptions")})
           </span>
         )}
       </div>
 
-      {/* Grups d'opcions */}
+      {/* Option groups */}
       {optionGroups.length > 0 && (
         <div style={{ display: "flex", flexDirection: "column", gap: 20, borderTop: "1px solid var(--rule)", paddingTop: 24 }}>
           {optionGroups.map((group) => (
@@ -89,7 +91,7 @@ export default function AddToCartForm({ productId, name, basePrice, image, optio
                           {opt.priceModifier > 0 ? `+${opt.priceModifier.toFixed(2)}€` : `${opt.priceModifier.toFixed(2)}€`}
                         </span>
                       )}
-                      {outOfStock && <span style={{ marginLeft: 6, fontSize: 9 }}>(esgotat)</span>}
+                      {outOfStock && <span style={{ marginLeft: 6, fontSize: 9 }}>{t("outOfStock")}</span>}
                     </button>
                   );
                 })}
@@ -99,9 +101,9 @@ export default function AddToCartForm({ productId, name, basePrice, image, optio
         </div>
       )}
 
-      {/* Quantitat */}
+      {/* Quantity */}
       <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 24 }}>
-        <div className="mono eyebrow" style={{ marginBottom: 12 }}>Quantitat</div>
+        <div className="mono eyebrow" style={{ marginBottom: 12 }}>{t("quantity")}</div>
         <div style={{ display: "inline-flex", flexDirection: "row", alignItems: "center", border: "1px solid var(--ink)" }}>
           <button
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -156,7 +158,7 @@ export default function AddToCartForm({ productId, name, basePrice, image, optio
         </div>
       </div>
 
-      {/* Botons */}
+      {/* Buttons */}
       <div style={{ display: "flex", gap: 12 }}>
         <button
           onClick={handleAdd}
@@ -169,13 +171,13 @@ export default function AddToCartForm({ productId, name, basePrice, image, optio
               : {}),
           }}
         >
-          {added ? "✓ Afegit" : "Afegir al carret"}
+          {added ? t("added") : t("addToCart")}
         </button>
         <button
           onClick={() => router.push(`/${locale}/cart`)}
           className="btn btn-ghost"
         >
-          Carret
+          {t("viewCart")}
         </button>
       </div>
     </div>

@@ -1,73 +1,173 @@
 {
-  "nav": {
-    "products": "Collection",
-    "cart": "Cart",
-    "about": "About"
-  },
-  "hero": {
-    "origin": "Cadaqués · Costa Brava · Catalonia",
-    "tagline": "Made with love in Cadaqués",
-    "subtitle": "Handcrafted candles inspired by the Mediterranean sea. Soy wax, eco resin and the beauty of Cap de Creus.",
-    "cta": "Discover the collection"
-  },
-  "manifest": {
-    "label": "Our philosophy",
-    "title": "Every candle,\na story from the sea",
-    "text": "We live by the Mediterranean and bring it to your home. Every piece is born from observing nature: the shapes of sea snails, the spiral of shells, the texture of sea urchins. Nothing synthetic. Nothing artificial. All handmade from scratch, with materials that respect the sea that inspires us."
-  },
-  "materials": {
-    "label": "Our materials",
-    "soja_title": "Soy wax",
-    "soja_text": "100% plant-based. Burns cleaner and longer than paraffin wax.",
-    "jesmonite_title": "Jesmonite®",
-    "jesmonite_text": "The most eco-friendly resin on the market. Biodegradable and VOC-free. The jars last forever.",
-    "vegan_title": "100% Vegan",
-    "vegan_text": "We never use organic elements like real shells or sea snails. Everything is respectful of marine life.",
-    "local_title": "Made in Cadaqués",
-    "local_text": "Every piece is handcrafted in our Cadaqués studio, in the heart of Cap de Creus Natural Park."
-  },
-  "collection": {
-    "label": "Showcase",
-    "title": "Inspired by the Mediterranean",
-    "products": [
-      {
-        "name": "Sea Star",
-        "desc": "With real beach glass",
-        "tag": "Exclusive"
-      },
-      {
-        "name": "Sea Spiral",
-        "desc": "Inspired by sea snails",
-        "tag": "New"
-      },
-      {
-        "name": "Sea Snail",
-        "desc": "Marble effect · All colors",
-        "tag": "Bestseller"
-      },
-      {
-        "name": "Curculla XL",
-        "desc": "The largest candle in the collection",
-        "tag": "Large format"
-      },
-      {
-        "name": "Corna",
-        "desc": "With colored glass from our beaches",
-        "tag": ""
-      },
-      {
-        "name": "Sea Urchin",
-        "desc": "Mediterranean silhouette",
-        "tag": ""
-      }
-    ],
-    "cta": "See all products"
-  },
-  "gallery": {
-    "label": "The process"
+  "navbar": {
+    "shop": "Shop",
+    "history": "Our Story",
+    "cart": "Cart"
   },
   "footer": {
-    "bio": "Handcrafted candles made with soy wax and ecological Jesmonite resin. Biodegradable and always respectful of the environment.",
-    "rights": "All rights reserved"
+    "bio": "Handcrafted candles made in Cadaqués, inspired by the Costa Brava landscape and crafted with 100% eco soy wax.",
+    "est": "Est. 2024 · Costa Brava",
+    "shopCol": "Shop",
+    "allProducts": "All products",
+    "familyMarina": "Marina Family",
+    "familyFloral": "Floral Family",
+    "familyHerbes": "Herbs Family",
+    "houseCol": "House",
+    "ourHistory": "Our story",
+    "ingredients": "Ingredients",
+    "shipping": "Shipping",
+    "contact": "Contact",
+    "newsletterCol": "Newsletter",
+    "newsletterText": "Seasonal arrivals, new scents and stories from the coast.",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterBtn": "Subscribe",
+    "newsletterThanks": "Thank you! You'll hear from us soon.",
+    "copyright": "© 2026 Sea&Candles Cadaqués",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "home": {
+    "heroEyebrow": "Spring collection — N° 01",
+    "heroTitle": "The light<br/><em>of the coast,</em><br/>in a candle.",
+    "heroSubtitle": "Handcrafted in Cadaqués with eco soy wax and essences inspired by the Costa Brava. Every candle is unique, like the landscape that inspires it.",
+    "heroCtaShop": "Discover the collection →",
+    "heroCtaAbout": "Our story",
+    "heroSceneLabel": "Scene N° 07",
+    "heroSceneCaption": "Noon at a whitewashed house on carrer des Call.",
+    "featuredEyebrow": "Curated",
+    "featuredTitle": "Four scents of the week",
+    "featuredSeeAll": "See all →",
+    "featuredComingSoon": "Coming soon",
+    "craftEyebrow": "N° 02 — The craft",
+    "craftTitle": "Every candle<br/><em>is made by hand,</em><br/>one by one.",
+    "craftText": "We use 100% eco soy wax, free from paraffins and toxins. Each candle burns for 45 to 55 hours, emitting up to 80% less CO₂ than conventional candles.",
+    "statSojLabel": "Soy wax",
+    "statParLabel": "Paraffins",
+    "statBurnLabel": "Average burn",
+    "statCO2Label": "vs. paraffin",
+    "seaEyebrow": "N° 03 — The sea",
+    "seaTitle": "Right now<br/><em>at our cove.</em>",
+    "seaText": "Our scents are born from watching the Mediterranean. The state of the sea reminds us every day why we do what we do.",
+    "seaQuote": "«The wind decides how the wick falls.»",
+    "seaQuoteAuthor": "— Oriol, founder",
+    "familiesEyebrow": "N° 04 — Olfactive families",
+    "familiesTitle": "Five ways to lose track of time.",
+    "closingQuote": "«When you light one of our candles you don't buy a product — you light a corner of Cadaqués.»",
+    "closingFootnote": "♡ Made with love in Cadaqués"
+  },
+  "families": {
+    "aromes": "scents",
+    "explore": "Explore →",
+    "marina_desc": "Salt, iodine, seaweed",
+    "floral_desc": "Jasmine, fig, magnolia",
+    "herbes_desc": "Thyme, rosemary, pine",
+    "terra_desc": "Olive, stone, dry wood",
+    "fusta_desc": "Cedar, pine, rope"
+  },
+  "seaWidget": {
+    "water": "Water",
+    "air": "Air",
+    "wind": "Wind",
+    "waves": "Waves",
+    "temperature": "temperature",
+    "height": "height",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "moon": "Crescent"
+  },
+  "products": {
+    "eyebrow": "Shop · Collection 2026",
+    "title": "All candles",
+    "subtitle": "Handcrafted candles made in Cadaqués. Each one in small batches, designed to accompany an hour of your day.",
+    "filterAll": "All",
+    "sortNewest": "Newest first",
+    "sortPriceAsc": "Price ↑",
+    "sortPriceDesc": "Price ↓",
+    "sortName": "A–Z",
+    "count": "{total} products",
+    "emptyTitle": "No candles match these filters.",
+    "emptyCta": "See all",
+    "collection": "Collection 2026"
+  },
+  "product": {
+    "breadcrumbHome": "Home",
+    "breadcrumbShop": "Shop",
+    "collection": "Collection 2026",
+    "materials": "Materials",
+    "matPrimary": "Primary",
+    "matSecondary": "Secondary",
+    "matBase": "Base",
+    "burnTime": "Burn time",
+    "weight": "Weight",
+    "dimensions": "Dimensions",
+    "madeIn": "Made in",
+    "madeInPlace": "Cadaqués, Girona"
+  },
+  "addToCart": {
+    "quantity": "Quantity",
+    "addToCart": "Add to cart",
+    "added": "✓ Added",
+    "viewCart": "Cart",
+    "outOfStock": "(out of stock)",
+    "forOptions": "for options"
+  },
+  "cart": {
+    "emptyEyebrow": "Your cart is empty",
+    "emptyTitle": "You haven't<br/><em style=\"font-weight:500\">chosen anything yet.</em>",
+    "emptyText": "Twelve handcrafted scents await you in the shop.",
+    "emptyCta": "Explore the shop →",
+    "itemSingular": "candle",
+    "itemPlural": "candles",
+    "cartTitle": "Your cart.",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingCalc": "Calculated at checkout",
+    "total": "Total",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "hello@example.com",
+    "emailError": "Please enter a valid email.",
+    "orderError": "Error processing your order.",
+    "checkoutBtn": "Confirm order · {price} €",
+    "processing": "Processing...",
+    "continueShopping": "Continue shopping",
+    "vatNote": "VAT included · Reusable packaging",
+    "summary": "Summary",
+    "remove": "Remove"
+  },
+  "confirmation": {
+    "eyebrow": "Order received",
+    "title": "Thank you for your purchase",
+    "text": "We have received your order and will be in touch soon.",
+    "reference": "Reference:",
+    "orderSummary": "Summary",
+    "orderTotal": "Total",
+    "continueShopping": "Continue shopping"
+  },
+  "quiSom": {
+    "eyebrow": "Cadaqués · Costa Brava · Catalonia",
+    "title": "Who we are",
+    "subtitle": "Handcrafted candles made by hand, at the rhythm of the Mediterranean. Inspired by the sea of Cadaqués, created with love and natural soy wax.",
+    "originsEyebrow": "Our origins",
+    "originsTitle": "Our story",
+    "madeWithLove": "Made with love",
+    "story1": "Sea & Candles was born in Cadaqués, one of the most beautiful villages on the Costa Brava, from a passion for craft and a deep connection with the Mediterranean. The sea has always been our source of inspiration: its colours, its textures, its calm.",
+    "story2": "It all began with a desire to learn how to work with soy wax and Jesmonite resins. Hours in the studio, colour trials, scents that evoked salt, breeze and stone. Gradually, the candles took on their own form — marine shapes, natural textures, Mediterranean essences.",
+    "story3": "Today, every candle we make carries the same spirit: made with care, without haste, with natural and sustainable materials. Because we believe that beautiful things need time and intention.",
+    "valuesEyebrow": "What drives us",
+    "valuesTitle": "Our values",
+    "craftTitle": "Craft",
+    "craftText": "Every piece is unique and handmade. We take the time needed to ensure the quality and detail that each candle deserves. We don't mass-produce — we create real craft.",
+    "naturTitle": "Nature",
+    "naturText": "We use natural soy wax, cotton wicks and fragrances free of harmful substances. We respect the environment in every decision, from materials to packaging.",
+    "cadaquesTitle": "Cadaqués",
+    "cadaquesText": "We are children of Cap de Creus. Our village, its light, its coves and its Mediterranean character permeate every creation. Cadaqués is not just where we live — it is where we come from.",
+    "teamEyebrow": "Behind every candle",
+    "teamTitle": "Our hands",
+    "teamText1": "We are a small project, made with great care. Behind Sea & Candles is a Cadaqués artisan with a passion for manual creativity, natural scents and the beauty of simple things.",
+    "teamText2": "Every candle that leaves the studio has passed through our hands, has been tended, smelled and approved. There is no piece we have not enjoyed making.",
+    "teamSignature": "— Made with love in Cadaqués",
+    "ctaTitle": "Come and meet us",
+    "ctaText": "Discover our handcrafted candles and bring a little of Cadaqués home.",
+    "ctaBtn": "View the collection"
   }
 }

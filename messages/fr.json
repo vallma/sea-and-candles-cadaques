@@ -1,73 +1,173 @@
 {
-  "nav": {
-    "products": "Collection",
-    "cart": "Panier",
-    "about": "À propos"
-  },
-  "hero": {
-    "origin": "Cadaqués · Costa Brava · Catalogne",
-    "tagline": "Fait avec amour à Cadaqués",
-    "subtitle": "Bougies artisanales inspirées de la mer méditerranée. Cire de soja, résine écologique et la beauté de Cap de Creus.",
-    "cta": "Découvrir la collection"
-  },
-  "manifest": {
-    "label": "Notre philosophie",
-    "title": "Chaque bougie,\nune histoire de la mer",
-    "text": "Nous vivons en Méditerranée et nous vous l'apportons. Chaque pièce naît de l'observation de la nature : les formes des escargots de mer, la spirale des coquillages, la texture des oursins. Rien de synthétique. Rien d'artificiel. Tout fait à la main, depuis zéro, avec des matériaux qui respectent la mer qui nous inspire."
-  },
-  "materials": {
-    "label": "Nos matériaux",
-    "soja_title": "Cire de soja",
-    "soja_text": "100% d'origine végétale. Brûle plus proprement et dure plus longtemps que la cire de paraffine.",
-    "jesmonite_title": "Jesmonite®",
-    "jesmonite_text": "La résine la plus écologique du marché. Biodégradable et sans COV. Les pots durent éternellement.",
-    "vegan_title": "100% Végane",
-    "vegan_text": "Nous n'utilisons jamais d'éléments organiques comme des vrais coquillages. Tout respecte la vie marine.",
-    "local_title": "Fait à Cadaqués",
-    "local_text": "Chaque pièce est créée à la main dans notre atelier de Cadaqués, au cœur du Parc Naturel de Cap de Creus."
-  },
-  "collection": {
-    "label": "Vitrine",
-    "title": "Inspiré par la Méditerranée",
-    "products": [
-      {
-        "name": "Étoile de Mer",
-        "desc": "Avec de vrais éclats de verre de plage",
-        "tag": "Exclusive"
-      },
-      {
-        "name": "Spirale de Mer",
-        "desc": "Inspirée des escargots de mer",
-        "tag": "Nouvelle"
-      },
-      {
-        "name": "Escargot de Mer",
-        "desc": "Effet marbre · Toutes les couleurs",
-        "tag": "Bestseller"
-      },
-      {
-        "name": "Curculla XL",
-        "desc": "La plus grande bougie de la collection",
-        "tag": "Grand format"
-      },
-      {
-        "name": "Corna",
-        "desc": "Avec des éclats de verre colorés de nos plages",
-        "tag": ""
-      },
-      {
-        "name": "Oursin de Mer",
-        "desc": "Silhouette méditerranéenne",
-        "tag": ""
-      }
-    ],
-    "cta": "Voir tous les produits"
-  },
-  "gallery": {
-    "label": "Le processus"
+  "navbar": {
+    "shop": "Boutique",
+    "history": "Notre histoire",
+    "cart": "Panier"
   },
   "footer": {
-    "bio": "Bougies artisanales en cire de soja et résine Jesmonite écologique. Biodégradables et toujours respectueuses de l'environnement.",
-    "rights": "Tous droits réservés"
+    "bio": "Bougies artisanales faites à la main à Cadaqués, inspirées du paysage de la Costa Brava et élaborées avec de la cire de soja 100% écologique.",
+    "est": "Est. 2024 · Costa Brava",
+    "shopCol": "Boutique",
+    "allProducts": "Tous les produits",
+    "familyMarina": "Famille Marine",
+    "familyFloral": "Famille Florale",
+    "familyHerbes": "Famille Herbes",
+    "houseCol": "Maison",
+    "ourHistory": "Notre histoire",
+    "ingredients": "Ingrédients",
+    "shipping": "Livraison",
+    "contact": "Contact",
+    "newsletterCol": "Newsletter",
+    "newsletterText": "Nouveautés saisonnières, nouveaux parfums et histoires de la côte.",
+    "newsletterPlaceholder": "votre@email.fr",
+    "newsletterBtn": "S'abonner",
+    "newsletterThanks": "Merci ! Vous aurez bientôt de nos nouvelles.",
+    "copyright": "© 2026 Sea&Candles Cadaqués",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  },
+  "home": {
+    "heroEyebrow": "Collection printemps — N° 01",
+    "heroTitle": "La lumière<br/><em>de la côte,</em><br/>en une bougie.",
+    "heroSubtitle": "Fabriquées à la main à Cadaqués avec de la cire de soja écologique et des essences inspirées de la Costa Brava. Chaque bougie est unique, comme le paysage qui l'inspire.",
+    "heroCtaShop": "Découvrir la collection →",
+    "heroCtaAbout": "Notre histoire",
+    "heroSceneLabel": "Scène N° 07",
+    "heroSceneCaption": "Midi dans une maison blanche du carrer des Call.",
+    "featuredEyebrow": "Sélectionnées",
+    "featuredTitle": "Quatre parfums de cette semaine",
+    "featuredSeeAll": "Voir tout →",
+    "featuredComingSoon": "Bientôt disponible",
+    "craftEyebrow": "N° 02 — Le métier",
+    "craftTitle": "Chaque bougie<br/><em>est faite à la main,</em><br/>une à une.",
+    "craftText": "Nous utilisons de la cire de soja 100% écologique, sans paraffines ni toxines. Chaque bougie brûle entre 45 et 55 heures, émettant jusqu'à 80% moins de CO₂ que les bougies conventionnelles.",
+    "statSojLabel": "Cire de soja",
+    "statParLabel": "Paraffines",
+    "statBurnLabel": "Durée moyenne",
+    "statCO2Label": "vs. paraffine",
+    "seaEyebrow": "N° 03 — La mer",
+    "seaTitle": "En ce moment<br/><em>dans notre crique.</em>",
+    "seaText": "Nos parfums naissent de l'observation de la Méditerranée. L'état de la mer nous rappelle chaque jour pourquoi nous faisons ce que nous faisons.",
+    "seaQuote": "«Le vent décide comment tombe la mèche.»",
+    "seaQuoteAuthor": "— Oriol, fondateur",
+    "familiesEyebrow": "N° 04 — Familles olfactives",
+    "familiesTitle": "Cinq façons d'oublier le temps.",
+    "closingQuote": "«Quand vous allumez l'une de nos bougies, vous n'achetez pas un produit — vous allumez un coin de Cadaqués.»",
+    "closingFootnote": "♡ Fait avec amour à Cadaqués"
+  },
+  "families": {
+    "aromes": "parfums",
+    "explore": "Explorer →",
+    "marina_desc": "Sel, iode, algues",
+    "floral_desc": "Jasmin, figue, magnolia",
+    "herbes_desc": "Thym, romarin, pin",
+    "terra_desc": "Olivier, pierre, bois sec",
+    "fusta_desc": "Cèdre, pin, corde"
+  },
+  "seaWidget": {
+    "water": "Eau",
+    "air": "Air",
+    "wind": "Vent",
+    "waves": "Vagues",
+    "temperature": "température",
+    "height": "hauteur",
+    "sunrise": "Lever",
+    "sunset": "Coucher",
+    "moon": "Croissant"
+  },
+  "products": {
+    "eyebrow": "Boutique · Collection 2026",
+    "title": "Toutes les bougies",
+    "subtitle": "Bougies artisanales faites à la main à Cadaqués. Chacune en petites séries, pensées pour accompagner une heure du jour.",
+    "filterAll": "Toutes",
+    "sortNewest": "Les plus récentes",
+    "sortPriceAsc": "Prix ↑",
+    "sortPriceDesc": "Prix ↓",
+    "sortName": "A–Z",
+    "count": "{total} produits",
+    "emptyTitle": "Aucune bougie ne correspond à ces filtres.",
+    "emptyCta": "Voir toutes",
+    "collection": "Collection 2026"
+  },
+  "product": {
+    "breadcrumbHome": "Accueil",
+    "breadcrumbShop": "Boutique",
+    "collection": "Collection 2026",
+    "materials": "Matériaux",
+    "matPrimary": "Principal",
+    "matSecondary": "Secondaire",
+    "matBase": "Base",
+    "burnTime": "Durée de combustion",
+    "weight": "Poids",
+    "dimensions": "Dimensions",
+    "madeIn": "Fabriqué à",
+    "madeInPlace": "Cadaqués, Gérone"
+  },
+  "addToCart": {
+    "quantity": "Quantité",
+    "addToCart": "Ajouter au panier",
+    "added": "✓ Ajouté",
+    "viewCart": "Panier",
+    "outOfStock": "(épuisé)",
+    "forOptions": "pour les options"
+  },
+  "cart": {
+    "emptyEyebrow": "Votre panier est vide",
+    "emptyTitle": "Vous n'avez pas encore<br/><em style=\"font-weight:500\">choisi quoi que ce soit.</em>",
+    "emptyText": "Douze parfums artisanaux vous attendent dans la boutique.",
+    "emptyCta": "Explorer la boutique →",
+    "itemSingular": "bougie",
+    "itemPlural": "bougies",
+    "cartTitle": "Votre panier.",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "shippingCalc": "Calculée à la confirmation",
+    "total": "Total",
+    "emailLabel": "Votre email",
+    "emailPlaceholder": "bonjour@exemple.fr",
+    "emailError": "Veuillez entrer un email valide.",
+    "orderError": "Erreur lors du traitement de la commande.",
+    "checkoutBtn": "Confirmer la commande · {price} €",
+    "processing": "Traitement...",
+    "continueShopping": "Continuer les achats",
+    "vatNote": "TVA incluse · Emballages réutilisables",
+    "summary": "Résumé",
+    "remove": "Supprimer"
+  },
+  "confirmation": {
+    "eyebrow": "Commande reçue",
+    "title": "Merci pour votre achat",
+    "text": "Nous avons bien reçu votre commande et nous vous contacterons bientôt.",
+    "reference": "Référence :",
+    "orderSummary": "Résumé",
+    "orderTotal": "Total",
+    "continueShopping": "Continuer les achats"
+  },
+  "quiSom": {
+    "eyebrow": "Cadaqués · Costa Brava · Catalogne",
+    "title": "Qui sommes-nous",
+    "subtitle": "Bougies artisanales faites à la main, au rythme de la Méditerranée. Inspirées de la mer de Cadaqués, créées avec amour et cire de soja naturelle.",
+    "originsEyebrow": "Nos origines",
+    "originsTitle": "Notre histoire",
+    "madeWithLove": "Fait avec amour",
+    "story1": "Sea & Candles est née à Cadaqués, l'un des plus beaux villages de la Costa Brava, née de la passion pour l'artisanat et d'un lien profond avec la Méditerranée. La mer a toujours été notre source d'inspiration : ses couleurs, ses textures, sa sérénité.",
+    "story2": "Tout a commencé par l'envie d'apprendre à travailler la cire de soja et les résines Jesmonite. Des heures en atelier, des essais de couleurs, des parfums qui évoquaient le sel, la brise et la pierre. Peu à peu, les bougies ont pris leur propre forme — des formes marines, des textures naturelles, des essences méditerranéennes.",
+    "story3": "Aujourd'hui, chaque bougie que nous fabriquons porte le même esprit : faite avec soin, sans hâte, avec des matériaux naturels et durables. Parce que nous croyons que les belles choses ont besoin de temps et d'intention.",
+    "valuesEyebrow": "Ce qui nous anime",
+    "valuesTitle": "Nos valeurs",
+    "craftTitle": "Artisanat",
+    "craftText": "Chaque pièce est unique et faite à la main. Nous prenons le temps nécessaire pour garantir la qualité et le soin que mérite chaque bougie. Nous ne faisons pas de production en masse — nous faisons de l'artisanat véritable.",
+    "naturTitle": "Nature",
+    "naturText": "Nous utilisons de la cire de soja naturelle, des mèches en coton et des fragrances sans substances nocives. Nous respectons l'environnement dans chaque décision, des matériaux aux emballages.",
+    "cadaquesTitle": "Cadaqués",
+    "cadaquesText": "Nous sommes enfants du Cap de Creus. Notre village, sa lumière, ses criques et son caractère méditerranéen imprègnent chaque création. Cadaqués n'est pas seulement là où nous vivons — c'est d'où nous venons.",
+    "teamEyebrow": "Derrière chaque bougie",
+    "teamTitle": "Nos mains",
+    "teamText1": "Nous sommes un petit projet, fait avec grand soin. Derrière Sea & Candles se trouve une artisane de Cadaqués, passionnée par la créativité manuelle, les parfums naturels et la beauté des choses simples.",
+    "teamText2": "Chaque bougie qui sort de l'atelier est passée entre nos mains, a été soignée, sentie et approuvée. Il n'existe aucune pièce que nous n'ayons pas pris plaisir à fabriquer.",
+    "teamSignature": "— Fait avec amour à Cadaqués",
+    "ctaTitle": "Venez nous rencontrer",
+    "ctaText": "Découvrez nos bougies artisanales et apportez un peu de Cadaqués chez vous.",
+    "ctaBtn": "Voir la collection"
   }
 }

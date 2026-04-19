@@ -1,73 +1,173 @@
 {
-  "nav": {
-    "products": "Col·lecció",
-    "cart": "Cistella",
-    "about": "Nosaltres"
-  },
-  "hero": {
-    "origin": "Cadaqués · Costa Brava · Catalunya",
-    "tagline": "Fet amb amor a Cadaqués",
-    "subtitle": "Espelmes artesanals inspirades en el mar mediterrani. Cera de soja, resina ecològica i la bellesa de Cap de Creus.",
-    "cta": "Descobrir la col·lecció"
-  },
-  "manifest": {
-    "label": "La nostra filosofia",
-    "title": "Cada espelma,\nuna història del mar",
-    "text": "Vivim al Mediterrani i el portem a casa vostra. Cada peça neix de l'observació de la natura: les formes dels cargols, l'espiral de les petxines, la textura dels eriçons. Res de sintètic. Res d'artificial. Tot fet a mà, des de zero, amb materials que respecten el mar que ens inspira."
-  },
-  "materials": {
-    "label": "Els nostres materials",
-    "soja_title": "Cera de soja",
-    "soja_text": "100% d'origen vegetal. Crema més neta i durant més temps que la cera de parafina.",
-    "jesmonite_title": "Jesmonite®",
-    "jesmonite_text": "La resina més ecològica del mercat. Biodegradable i sense COVs. Els pots duren per sempre.",
-    "vegan_title": "100% Vegà",
-    "vegan_text": "Mai utilitzem elements orgànics com cargols o petxines reals. Tot és respectuós amb la vida marina.",
-    "local_title": "Fet a Cadaqués",
-    "local_text": "Cada peça es crea a mà al taller de Cadaqués, al cor del Parc Natural de Cap de Creus."
-  },
-  "collection": {
-    "label": "Mostrador",
-    "title": "Inspirat en el Mediterrani",
-    "products": [
-      {
-        "name": "Estrella de Mar",
-        "desc": "Amb vidres de platja reals",
-        "tag": "Exclusiva"
-      },
-      {
-        "name": "Espiral de Mar",
-        "desc": "Inspirada en els cargols de mar",
-        "tag": "Nova"
-      },
-      {
-        "name": "Cargol de Mar",
-        "desc": "Efecte marbre · Tots els colors",
-        "tag": "Bestseller"
-      },
-      {
-        "name": "Curculla XL",
-        "desc": "L'espelma més gran de la col·lecció",
-        "tag": "Gran format"
-      },
-      {
-        "name": "Corna",
-        "desc": "Amb vidres de colors de les nostres platges",
-        "tag": ""
-      },
-      {
-        "name": "Eriçó de Mar",
-        "desc": "Silueta mediterrània",
-        "tag": ""
-      }
-    ],
-    "cta": "Veure tots els productes"
-  },
-  "gallery": {
-    "label": "El procés"
+  "navbar": {
+    "shop": "Botiga",
+    "history": "Història",
+    "cart": "Cistella"
   },
   "footer": {
-    "bio": "Espelmes artesanals fetes amb cera de soja i resina Jesmonite ecològica. Biodegradables i sempre respectant el medi.",
-    "rights": "Tots els drets reservats"
+    "bio": "Espelmes artesanals fetes a mà a Cadaqués, inspirades en el paisatge de la Costa Brava i elaborades amb cera de soja 100% ecològica.",
+    "est": "Est. 2024 · Costa Brava",
+    "shopCol": "Botiga",
+    "allProducts": "Tots els productes",
+    "familyMarina": "Família Marina",
+    "familyFloral": "Família Floral",
+    "familyHerbes": "Família Herbes",
+    "houseCol": "Casa",
+    "ourHistory": "La nostra història",
+    "ingredients": "Ingredients",
+    "shipping": "Enviaments",
+    "contact": "Contacte",
+    "newsletterCol": "Butlletí",
+    "newsletterText": "Novetats de temporada, noves aromes i històries de la costa.",
+    "newsletterPlaceholder": "el.teu@correu.cat",
+    "newsletterBtn": "Subscriure'm",
+    "newsletterThanks": "Gràcies! Aviat rebràs novetats.",
+    "copyright": "© 2026 Sea&Candles Cadaqués",
+    "privacy": "Privacitat",
+    "terms": "Termes"
+  },
+  "home": {
+    "heroEyebrow": "Col·lecció primavera — N° 01",
+    "heroTitle": "La llum<br/><em>de la costa,</em><br/>en una espelma.",
+    "heroSubtitle": "Elaborades a mà a Cadaqués amb cera de soja ecològica i essències inspirades en la Costa Brava. Cada espelma és única, com el paisatge que la inspira.",
+    "heroCtaShop": "Descobreix la col·lecció →",
+    "heroCtaAbout": "La nostra història",
+    "heroSceneLabel": "Escena N° 07",
+    "heroSceneCaption": "Migdia a una casa blanca del carrer des Call.",
+    "featuredEyebrow": "Escollides",
+    "featuredTitle": "Quatre aromes d'aquesta setmana",
+    "featuredSeeAll": "Veure totes →",
+    "featuredComingSoon": "Aviat disponible",
+    "craftEyebrow": "N° 02 — L'ofici",
+    "craftTitle": "Cada espelma<br/><em>es fa a mà,</em><br/>una a una.",
+    "craftText": "Fem servir cera de soja 100% ecològica, lliure de parafines i toxines. Cada espelma crema entre 45 i 55 hores, emetent fins a un 80% menys de CO₂ que les espelmes convencionals.",
+    "statSojLabel": "Cera de soja",
+    "statParLabel": "Parafines",
+    "statBurnLabel": "Cremada mitjana",
+    "statCO2Label": "vs. parafina",
+    "seaEyebrow": "N° 03 — El mar",
+    "seaTitle": "Ara mateix<br/><em>a la nostra cala.</em>",
+    "seaText": "Les nostres aromes neixen d'observar el Mediterrani. L'estat del mar cada dia ens recorda per què fem el que fem.",
+    "seaQuote": "«El vent decideix com cau la metxa.»",
+    "seaQuoteAuthor": "— Oriol, fundador",
+    "familiesEyebrow": "N° 04 — Famílies olfactives",
+    "familiesTitle": "Cinc maneres d'oblidar-se del temps.",
+    "closingQuote": "«Quan encens una espelma nostra no compres un producte, encens un racó de Cadaqués.»",
+    "closingFootnote": "♡ Fet amb amor a Cadaqués"
+  },
+  "families": {
+    "aromes": "aromes",
+    "explore": "Explora →",
+    "marina_desc": "Sal, iode, algues",
+    "floral_desc": "Gessamí, figa, magnòlia",
+    "herbes_desc": "Farigola, romaní, pi",
+    "terra_desc": "Olivera, pedra, fusta seca",
+    "fusta_desc": "Cedre, pi, corda"
+  },
+  "seaWidget": {
+    "water": "Aigua",
+    "air": "Aire",
+    "wind": "Vent",
+    "waves": "Onatge",
+    "temperature": "temperatura",
+    "height": "alçada",
+    "sunrise": "Sortida",
+    "sunset": "Posta",
+    "moon": "Creixent"
+  },
+  "products": {
+    "eyebrow": "Botiga · Col·lecció 2026",
+    "title": "Totes les espelmes",
+    "subtitle": "Espelmes artesanes fetes a mà a Cadaqués. Cadascuna en petites tandes, pensades per acompanyar una hora del dia.",
+    "filterAll": "Totes",
+    "sortNewest": "Més nous primer",
+    "sortPriceAsc": "Preu ↑",
+    "sortPriceDesc": "Preu ↓",
+    "sortName": "A–Z",
+    "count": "{total} productes",
+    "emptyTitle": "Cap espelma amb aquests filtres.",
+    "emptyCta": "Veure totes",
+    "collection": "Col·lecció 2026"
+  },
+  "product": {
+    "breadcrumbHome": "Casa",
+    "breadcrumbShop": "Botiga",
+    "collection": "Col·lecció 2026",
+    "materials": "Materials",
+    "matPrimary": "Principal",
+    "matSecondary": "Secundari",
+    "matBase": "Base",
+    "burnTime": "Temps crema",
+    "weight": "Pes",
+    "dimensions": "Dimensions",
+    "madeIn": "Fet a",
+    "madeInPlace": "Cadaqués, Girona"
+  },
+  "addToCart": {
+    "quantity": "Quantitat",
+    "addToCart": "Afegir al carret",
+    "added": "✓ Afegit",
+    "viewCart": "Carret",
+    "outOfStock": "(esgotat)",
+    "forOptions": "per opcions"
+  },
+  "cart": {
+    "emptyEyebrow": "La cistella és buida",
+    "emptyTitle": "Encara no<br/><em style=\"font-weight:500\">has triat res.</em>",
+    "emptyText": "Dotze aromes fetes a mà t'esperen a la botiga.",
+    "emptyCta": "Explora la botiga →",
+    "itemSingular": "espelma",
+    "itemPlural": "espelmes",
+    "cartTitle": "La teva cistella.",
+    "subtotal": "Subtotal",
+    "shipping": "Enviament",
+    "shippingCalc": "Calculat al confirmar",
+    "total": "Total",
+    "emailLabel": "El teu email",
+    "emailPlaceholder": "hola@exemple.com",
+    "emailError": "Introdueix un email vàlid.",
+    "orderError": "Error en processar la comanda.",
+    "checkoutBtn": "Confirmar comanda · {price} €",
+    "processing": "Processant...",
+    "continueShopping": "Continua comprant",
+    "vatNote": "IVA inclòs · Envasos reutilitzables",
+    "summary": "Resum",
+    "remove": "Eliminar"
+  },
+  "confirmation": {
+    "eyebrow": "Comanda rebuda",
+    "title": "Gràcies per la teva compra",
+    "text": "Hem rebut la teva comanda i ens posarem en contacte aviat.",
+    "reference": "Referència:",
+    "orderSummary": "Resum",
+    "orderTotal": "Total",
+    "continueShopping": "Continuar comprant"
+  },
+  "quiSom": {
+    "eyebrow": "Cadaqués · Costa Brava · Catalunya",
+    "title": "Qui som",
+    "subtitle": "Espelmes artesanals fetes a mà, al ritme del Mediterrani. Inspirades en el mar de Cadaqués, creades amb amor i cera de soja natural.",
+    "originsEyebrow": "Els nostres orígens",
+    "originsTitle": "La nostra història",
+    "madeWithLove": "Fet amb amor",
+    "story1": "Sea & Candles va néixer a Cadaqués, un dels pobles més bells de la Costa Brava, arran de la passió per l'artesania i la connexió profunda amb el Mediterrani. El mar sempre ha estat la nostra font d'inspiració: els seus colors, les seves textures, la seva calma.",
+    "story2": "Tot va començar amb ganes d'aprendre a treballar la cera de soja i les resines de Jesmonita. Hores al taller, proves de colors, aromes que evocaven sal, brisa i pedra. Poc a poc, les espelmes van agafar forma pròpia —formes marines, textures naturals, essències del Mediterrani.",
+    "story3": "Avui, cada espelma que fem porta el mateix esperit: feta amb cura, sense pressa, amb materials naturals i sostenibles. Perquè creiem que les coses boniques necessiten temps i intenció.",
+    "valuesEyebrow": "El que ens mou",
+    "valuesTitle": "Els nostres valors",
+    "craftTitle": "Artesania",
+    "craftText": "Cada peça és única i feta a mà. Ens prenem el temps necessari per garantir la qualitat i el detall que mereix cada espelma. No fem producció en massa — fem artesania real.",
+    "naturTitle": "Natura",
+    "naturText": "Utilitzem cera de soja natural, mines de cotó i fragàncies lliures de substàncies nocives. Respectem el medi ambient en cada decisió, des dels materials fins als embalatges.",
+    "cadaquesTitle": "Cadaqués",
+    "cadaquesText": "Som fills del Cap de Creus. El nostre poble, la seva llum, les seves cales i el seu caràcter mediterrani impregnen cada creació. Cadaqués no és només on vivim — és d'on venim.",
+    "teamEyebrow": "Darrere de cada espelma",
+    "teamTitle": "Les nostres mans",
+    "teamText1": "Som un projecte petit, fet amb gran estima. Darrere de Sea & Candles hi ha una artesana de Cadaqués amb passió per la creativitat manual, els aromes naturals i la bellesa de les coses simples.",
+    "teamText2": "Cada espelma que surte del taller ha passat per les nostres mans, ha estat cuidada, olida i aprovada. No existeix cap peça que no hàgim gaudit de fer.",
+    "teamSignature": "— Fet amb amor a Cadaqués",
+    "ctaTitle": "Vine a conèixer-nos",
+    "ctaText": "Descobreix les nostres espelmes artesanals i porta una mica de Cadaqués a casa teva.",
+    "ctaBtn": "Veure la col·lecció"
   }
 }

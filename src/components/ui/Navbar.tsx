@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useCart } from "@/lib/cart-context";
 import CartBasket from "@/components/ui/CartBasket";
 
@@ -14,6 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const { totalItems } = useCart();
+  const t = useTranslations("navbar");
 
   function switchLocale(next: string) {
     const segments = pathname.split("/");
@@ -48,10 +49,10 @@ export default function Navbar() {
         {/* Left: nav links */}
         <nav className="nav-left" style={{ display: "flex", alignItems: "center", gap: 28 }}>
           <Link href={`/${locale}/products`} className="nav-link">
-            Botiga
+            {t("shop")}
           </Link>
           <Link href={`/${locale}/qui-som`} className="nav-link">
-            Història
+            {t("history")}
           </Link>
         </nav>
 
@@ -119,7 +120,7 @@ export default function Navbar() {
           <Link
             href={`/${locale}/cart`}
             style={{ display: "flex", alignItems: "center", color: "var(--ink-soft)", textDecoration: "none" }}
-            aria-label="Cistella"
+            aria-label={t("cart")}
           >
             <CartBasket count={totalItems} className="w-10 h-10" />
           </Link>
