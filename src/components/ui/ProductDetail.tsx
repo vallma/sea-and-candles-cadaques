@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import AddToCartButton from "./AddToCartButton";
-import type { SelectedOption } from "@/lib/cart-context";
+import type { CartOption } from "@/lib/cart-context";
 
 interface Option {
   id: string;
@@ -47,16 +47,18 @@ interface Labels {
 
 export default function ProductDetail({ product, labels }: { product: Product; labels: Labels }) {
   const [activeImage, setActiveImage] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState<Record<string, Option>>({});
+  const [selectedOptions, setCartOptions] = useState<Record<string, Option>>({});
 
   const allGroupsSelected =
     product.optionGroups.length === 0 ||
     product.optionGroups.every((g) => selectedOptions[g.id] !== undefined);
 
-  const builtOptions: SelectedOption[] = Object.entries(selectedOptions).map(([gId, opt]) => {
+  const builtOptions: CartOption[] = Object.entries(selectedOptions).map(([gId, opt]) => {
     const group = product.optionGroups.find((g) => g.id === gId)!;
     return {
+      groupId: gId,
       groupName: group.name,
+      optionId: opt.id,
       optionValue: opt.value,
       priceModifier: opt.priceModifier,
     };
@@ -135,7 +137,7 @@ export default function ProductDetail({ product, labels }: { product: Product; l
                     key={opt.id}
                     disabled={outOfStock}
                     onClick={() =>
-                      setSelectedOptions((prev) => ({ ...prev, [group.id]: opt }))
+                      setCartOptions((prev) => ({ ...prev, [group.id]: opt }))
                     }
                     className={`px-4 py-2 text-[11px] tracking-wider border transition-all duration-200 ${
                       outOfStock

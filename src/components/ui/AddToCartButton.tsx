@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart, type SelectedOption } from "@/lib/cart-context";
+import { useCart, type CartOption } from "@/lib/cart-context";
 import { useState } from "react";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   name: string;
   basePrice: number;
   image: string;
-  selectedOptions: SelectedOption[];
+  selectedOptions: CartOption[];
   label: string;
   addedLabel: string;
 }
@@ -23,7 +23,7 @@ export default function AddToCartButton({
     basePrice + selectedOptions.reduce((s, o) => s + o.priceModifier, 0);
 
   function handleAdd() {
-    addItem({ productId, name, price: finalPrice, image, selectedOptions });
+    addItem({ productId, name, basePrice, image, selectedOptions });
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   }
