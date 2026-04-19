@@ -195,6 +195,17 @@ body {
 .grid-2-hero   { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: end; }
 .grid-2-sea    { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
 
+/* ── Navbar inner grid ── */
+.nav-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  gap: 32px;
+}
+
 /* ── Section padding utilities ── */
 .section-pad    { padding: 80px 40px; }
 .section-pad-lg { padding: 120px 40px; }
@@ -253,6 +264,7 @@ body {
   .nav-left { display: none; }
   .nav-hamburger { display: flex !important; }
   .nav-locale-switcher { display: none !important; }
+  .nav-inner { padding: 10px 16px; gap: 0; }
   .section-pad    { padding: 48px 24px; }
   .section-pad-lg { padding: 64px 24px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }

@@ -39,27 +39,40 @@ export default function Navbar() {
           borderBottom: "1px solid var(--rule)",
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr auto 1fr",
-            alignItems: "center",
-            maxWidth: 1600,
-            margin: "0 auto",
-            padding: "10px 40px",
-            height: "auto",
-            gap: 32,
-          }}
-        >
-          {/* Left: nav links (hidden on mobile via CSS) */}
-          <nav className="nav-left" style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <Link href={`/${locale}/products`} className="nav-link">
-              {t("shop")}
-            </Link>
-            <Link href={`/${locale}/qui-som`} className="nav-link">
-              {t("history")}
-            </Link>
-          </nav>
+        <div className="nav-inner">
+          {/* Left: nav links (desktop) + hamburger (mobile) */}
+          <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
+            <nav className="nav-left" style={{ display: "flex", alignItems: "center", gap: 28 }}>
+              <Link href={`/${locale}/products`} className="nav-link">
+                {t("shop")}
+              </Link>
+              <Link href={`/${locale}/qui-som`} className="nav-link">
+                {t("history")}
+              </Link>
+            </nav>
+            {/* Hamburger — mobile only, left side */}
+            <button
+              className="nav-hamburger"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Menu"
+              style={{
+                display: "none",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: 5,
+                width: 36,
+                height: 36,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 4,
+              }}
+            >
+              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
+              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
+              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
+            </button>
+          </div>
 
           {/* Center: logo */}
           <Link
@@ -130,28 +143,6 @@ export default function Navbar() {
               <CartBasket count={totalItems} className="w-10 h-10" />
             </Link>
 
-            {/* Hamburger button — visible only on mobile */}
-            <button
-              className="nav-hamburger"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-label="Menu"
-              style={{
-                display: "none",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: 5,
-                width: 36,
-                height: 36,
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                padding: 4,
-              }}
-            >
-              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1, transition: "all 0.25s" }} />
-              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1, transition: "all 0.25s" }} />
-              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1, transition: "all 0.25s" }} />
-            </button>
           </div>
         </div>
       </header>
