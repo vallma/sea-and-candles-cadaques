@@ -11,7 +11,7 @@ export default function middleware(req: NextRequest) {
   if (pathname.startsWith("/admin")) {
     const auth = req.headers.get("authorization");
     const password = process.env.ADMIN_PASSWORD ?? "seaandcandles";
-    const expected = "Basic " + Buffer.from(`admin:${password}`).toString("base64");
+    const expected = "Basic " + btoa(`admin:${password}`);
 
     if (auth !== expected) {
       return new NextResponse("Unauthorized", {
