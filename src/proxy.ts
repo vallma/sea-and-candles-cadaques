@@ -11,9 +11,15 @@ export default function middleware(req: NextRequest) {
   if (pathname.startsWith("/admin")) {
     const auth = req.headers.get("authorization");
     const password = process.env.ADMIN_PASSWORD ?? "seaandcandles";
-    const expected = "Basic " + btoa(`admin:${password}`);
 
-    if (auth !== expected) {
+    let authorized = false;
+    if (auth && auth.startsWith("Basic ")) {
+      const decoded = atob(auth.slice(6));
+      const [user, pass] = decoded.split(":");
+      authorized = user === "admin" && pass === password;
+    }
+
+    if (!authorized) {
       return new NextResponse("Unauthorized", {
         status: 401,
         headers: { "WWW-Authenticate": 'Basic realm="Admin"' },
