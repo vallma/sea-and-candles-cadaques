@@ -40,39 +40,15 @@ export default function Navbar() {
         }}
       >
         <div className="nav-inner">
-          {/* Left: nav links (desktop) + hamburger (mobile) */}
-          <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <nav className="nav-left" style={{ display: "flex", alignItems: "center", gap: 28 }}>
-              <Link href={`/${locale}/products`} className="nav-link">
-                {t("shop")}
-              </Link>
-              <Link href={`/${locale}/qui-som`} className="nav-link">
-                {t("history")}
-              </Link>
-            </nav>
-            {/* Hamburger — mobile only, left side */}
-            <button
-              className="nav-hamburger"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-label="Menu"
-              style={{
-                display: "none",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: 5,
-                width: 36,
-                height: 36,
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                padding: 4,
-              }}
-            >
-              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
-              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
-              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
-            </button>
-          </div>
+          {/* Left: nav links (desktop only) */}
+          <nav className="nav-left" style={{ display: "flex", alignItems: "center", gap: 28 }}>
+            <Link href={`/${locale}/products`} className="nav-link">
+              {t("shop")}
+            </Link>
+            <Link href={`/${locale}/qui-som`} className="nav-link">
+              {t("history")}
+            </Link>
+          </nav>
 
           {/* Center: logo */}
           <Link
@@ -131,6 +107,28 @@ export default function Navbar() {
               <CartBasket count={totalItems} className="w-10 h-10" />
             </Link>
 
+            {/* Hamburger — mobile only, right side */}
+            <button
+              className="nav-hamburger"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Menu"
+              style={{
+                display: "none",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: 5,
+                width: 36,
+                height: 36,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 4,
+              }}
+            >
+              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
+              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
+              <div style={{ width: 22, height: 1.5, background: "var(--ink)", borderRadius: 1 }} />
+            </button>
           </div>
         </div>
       </header>
